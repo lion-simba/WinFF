@@ -1,12 +1,12 @@
 object frmMain: TfrmMain
-  Left = 330
-  Height = 600
-  Top = 167
-  Width = 800
-  ActiveControl = Panel2
+  Left = 264
+  Height = 587
+  Top = 98
+  Width = 1064
+  ActiveControl = pnlTop
   AllowDropFiles = True
   Caption = 'WinFF'
-  ClientHeight = 567
+  ClientHeight = 564
   ClientWidth = 1064
   Constraints.MinHeight = 350
   Constraints.MinWidth = 540
@@ -323,28 +323,28 @@ object frmMain: TfrmMain
   LCLVersion = '0.9.28.2'
   object Label2: TLabel
     Left = 0
-    Height = 16
+    Height = 17
     Top = 0
-    Width = 1
+    Width = 2
     ParentColor = False
   end
   object pnlMain: TPanel
     Left = 0
-    Height = 327
+    Height = 324
     Top = 54
     Width = 1064
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
     Caption = 'pnlMain'
-    ClientHeight = 327
+    ClientHeight = 324
     ClientWidth = 1064
     Color = clSilver
     ParentColor = False
     TabOrder = 0
     object filelist: TListBox
       Left = 0
-      Height = 147
+      Height = 144
       Top = 0
       Width = 1064
       Align = alClient
@@ -353,11 +353,12 @@ object frmMain: TfrmMain
       OnDblClick = btnPlayClick
       OnKeyUp = filelistKeyUp
       TabOrder = 0
+      TopIndex = -1
     end
     object pnlbottom: TPanel
       Left = 0
       Height = 180
-      Top = 147
+      Top = 144
       Width = 1064
       Align = alBottom
       ClientHeight = 180
@@ -377,38 +378,38 @@ object frmMain: TfrmMain
         TabOrder = 0
         object tabPage1: TTabSheet
           Caption = 'tabPage1'
-          ClientHeight = 150
+          ClientHeight = 151
           ClientWidth = 1054
           object Label1: TLabel
             Left = 13
-            Height = 16
+            Height = 18
             Top = 1
-            Width = 69
+            Width = 85
             Caption = 'Convert to....'
             ParentColor = False
           end
           object Label11: TLabel
             Left = 12
-            Height = 16
+            Height = 18
             Top = 103
-            Width = 73
+            Width = 87
             Caption = 'Output folder'
             ParentColor = False
           end
           object Label19: TLabel
             Left = 13
-            Height = 16
+            Height = 18
             Top = 53
-            Width = 69
+            Width = 85
             Caption = 'Convert to....'
             ParentColor = False
           end
           object PresetBox: TComboBox
             Left = 13
-            Height = 23
+            Height = 29
             Top = 69
             Width = 472
-            ItemHeight = 15
+            ItemHeight = 0
             MaxLength = 65535
             OnChange = PresetBoxChange
             Style = csDropDownList
@@ -416,7 +417,7 @@ object frmMain: TfrmMain
           end
           object DestFolder: TEdit
             Left = 12
-            Height = 23
+            Height = 27
             Top = 120
             Width = 439
             TabOrder = 2
@@ -435,10 +436,10 @@ object frmMain: TfrmMain
           end
           object categorybox: TComboBox
             Left = 13
-            Height = 23
+            Height = 29
             Top = 17
             Width = 472
-            ItemHeight = 15
+            ItemHeight = 0
             MaxLength = 65535
             OnChange = categoryboxChange
             Sorted = True
@@ -462,10 +463,13 @@ object frmMain: TfrmMain
     TabOrder = 1
     object btnAdd: TBitBtn
       Left = 1
-      Height = 53
-      Top = 0
+      Height = 52
+      Top = 1
       Width = 60
+      Align = alLeft
+      AutoSize = True
       Caption = 'Add'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -548,11 +552,14 @@ object frmMain: TfrmMain
       TabOrder = 0
     end
     object btnRemove: TBitBtn
-      Left = 64
-      Height = 53
-      Top = 0
-      Width = 60
+      Left = 61
+      Height = 52
+      Top = 1
+      Width = 63
+      Align = alLeft
+      AutoSize = True
       Caption = 'Remove'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -635,11 +642,14 @@ object frmMain: TfrmMain
       TabOrder = 1
     end
     object btnClear: TBitBtn
-      Left = 128
-      Height = 53
-      Top = 0
+      Left = 124
+      Height = 52
+      Top = 1
       Width = 60
+      Align = alLeft
+      AutoSize = True
       Caption = 'Clear'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -722,11 +732,14 @@ object frmMain: TfrmMain
       TabOrder = 2
     end
     object btnPlay: TBitBtn
-      Left = 200
-      Height = 53
-      Top = 0
-      Width = 70
+      Left = 184
+      Height = 52
+      Top = 1
+      Width = 60
+      Align = alLeft
+      AutoSize = True
       Caption = 'Play'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -809,11 +822,14 @@ object frmMain: TfrmMain
       TabOrder = 3
     end
     object btnConvert: TBitBtn
-      Left = 344
-      Height = 53
-      Top = 0
-      Width = 70
+      Left = 306
+      Height = 52
+      Top = 1
+      Width = 61
+      Align = alLeft
+      AutoSize = True
       Caption = 'Convert'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -994,11 +1010,14 @@ object frmMain: TfrmMain
       end
     end
     object btnPreview: TBitBtn
-      Left = 272
-      Height = 53
-      Top = 0
-      Width = 70
+      Left = 244
+      Height = 52
+      Top = 1
+      Width = 62
+      Align = alLeft
+      AutoSize = True
       Caption = 'Preview'
+      Constraints.MinWidth = 60
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
         2000000000000009000064000000640000000000000000000000FFFFFF00FFFF
@@ -1084,7 +1103,7 @@ object frmMain: TfrmMain
   object pnlAdditionalOptions: TPanel
     Left = 0
     Height = 163
-    Top = 381
+    Top = 378
     Width = 1064
     Align = alBottom
     ClientHeight = 163
@@ -1101,21 +1120,21 @@ object frmMain: TfrmMain
       Width = 1062
       Align = alClient
       Caption = 'gbxSettings'
-      ClientHeight = 143
-      ClientWidth = 1058
+      ClientHeight = 141
+      ClientWidth = 1054
       TabOrder = 0
       object nbkSettings: TNotebook
         Left = 0
-        Height = 143
+        Height = 141
         Top = 0
-        Width = 1058
+        Width = 1054
         Align = alClient
         PageIndex = 1
         TabOrder = 0
         object tabVideoSettings: TPage
           Caption = 'Video Settings'
           ClientWidth = 1050
-          ClientHeight = 115
+          ClientHeight = 113
           object lblVideoBitRate: TLabel
             Left = 6
             Height = 16
@@ -1217,79 +1236,79 @@ object frmMain: TfrmMain
         end
         object tabAudioSettings: TPage
           Caption = 'Audio Settings'
-          ClientWidth = 1050
-          ClientHeight = 115
+          ClientWidth = 1046
+          ClientHeight = 114
           object Label7: TLabel
             Left = 9
-            Height = 16
+            Height = 18
             Top = 5
-            Width = 76
+            Width = 94
             Caption = 'Audio Bit Rate'
             ParentColor = False
           end
           object Label8: TLabel
             Left = 133
-            Height = 16
+            Height = 18
             Top = 5
-            Width = 66
+            Width = 84
             Caption = 'Sample Rate'
             ParentColor = False
           end
           object Label10: TLabel
             Left = 266
-            Height = 16
+            Height = 18
             Top = 5
-            Width = 41
+            Width = 52
             Caption = 'Label10'
             ParentColor = False
           end
           object Label20: TLabel
             Left = 11
-            Height = 16
+            Height = 18
             Top = 60
-            Width = 41
+            Width = 52
             Caption = 'Label10'
             ParentColor = False
           end
           object Label21: TLabel
             Left = 133
-            Height = 16
+            Height = 18
             Top = 60
-            Width = 41
+            Width = 52
             Caption = 'Label10'
             ParentColor = False
           end
           object audbitrate: TEdit
             Left = 9
-            Height = 23
+            Height = 27
             Top = 25
             Width = 101
             TabOrder = 0
           end
           object audsamplingrate: TEdit
             Left = 133
-            Height = 23
+            Height = 27
             Top = 25
             Width = 80
             TabOrder = 1
           end
           object audchannels: TEdit
             Left = 261
-            Height = 23
+            Height = 27
             Top = 25
             Width = 32
             TabOrder = 2
           end
           object edtVolume: TEdit
             Left = 9
-            Height = 23
+            Height = 27
             Top = 76
             Width = 101
             TabOrder = 3
           end
           object edtAudioSync: TEdit
             Left = 133
-            Height = 23
+            Height = 27
             Top = 76
             Width = 101
             TabOrder = 4
@@ -1298,7 +1317,7 @@ object frmMain: TfrmMain
         object tabCmdLineSettings: TPage
           Caption = 'tabCmdLineSettings'
           ClientWidth = 1050
-          ClientHeight = 115
+          ClientHeight = 113
           object commandlineparams: TEdit
             Left = 1
             Height = 25
@@ -1310,7 +1329,7 @@ object frmMain: TfrmMain
         object tabPageCrop: TPage
           Caption = 'Crop'
           ClientWidth = 1050
-          ClientHeight = 115
+          ClientHeight = 113
           object lblCropLeft: TLabel
             Left = 3
             Height = 18
@@ -1509,7 +1528,7 @@ object frmMain: TfrmMain
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 544
+    Top = 541
     Width = 1064
     AutoHint = True
     Panels = <>
