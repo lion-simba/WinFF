@@ -84,10 +84,10 @@ object Form5: TForm5
       ClientWidth = 472
       TabOrder = 0
       object btnSave: TButton
-        Left = 144
+        Left = 146
         Height = 35
         Top = 8
-        Width = 54
+        Width = 50
         Anchors = []
         AutoSize = True
         BorderSpacing.InnerBorder = 4
@@ -99,7 +99,7 @@ object Form5: TForm5
         Left = 7
         Height = 35
         Top = 8
-        Width = 135
+        Width = 134
         Anchors = []
         AutoSize = True
         BorderSpacing.InnerBorder = 4
@@ -119,10 +119,10 @@ object Form5: TForm5
       ClientWidth = 182
       TabOrder = 1
       object Button1: TButton
-        Left = 96
+        Left = 98
         Height = 35
         Top = 11
-        Width = 40
+        Width = 37
         Anchors = []
         AutoSize = True
         BorderSpacing.InnerBorder = 4

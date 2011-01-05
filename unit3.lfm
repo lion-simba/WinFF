@@ -60,13 +60,13 @@ object Form3: TForm3
     TabOrder = 0
     object Page1: TPage
       Caption = 'WinFF'
-      ClientWidth = 369
-      ClientHeight = 234
+      ClientWidth = 365
+      ClientHeight = 238
       object Label1: TLabel
         Left = 60
         Height = 18
         Top = 10
-        Width = 61
+        Width = 66
         Caption = 'WinFF 1.3'
         ParentColor = False
         OnClick = Label1Click
@@ -160,7 +160,7 @@ object Form3: TForm3
         Left = 4
         Height = 18
         Top = 64
-        Width = 185
+        Width = 187
         Caption = 'Copyright 2006-2009 GPL V3'
         ParentColor = False
       end
@@ -168,7 +168,7 @@ object Form3: TForm3
         Left = 4
         Height = 18
         Top = 90
-        Width = 250
+        Width = 257
         Caption = 'Matthew Weatherford and Ian Stoffberg'
         Font.Color = clBlue
         ParentColor = False
@@ -180,7 +180,7 @@ object Form3: TForm3
         Left = 60
         Height = 18
         Top = 26
-        Width = 122
+        Width = 132
         Caption = 'http://www.winff.org'
         Font.Color = clBlue
         ParentColor = False
@@ -191,7 +191,7 @@ object Form3: TForm3
         Left = 4
         Height = 18
         Top = 114
-        Width = 263
+        Width = 269
         Caption = 'Debian/Ubuntu Packaging by Paul Gevers'
         ParentColor = False
       end
@@ -210,7 +210,7 @@ object Form3: TForm3
         Left = 4
         Height = 18
         Top = 157
-        Width = 166
+        Width = 171
         Caption = 'High Quality Presets From'
         ParentColor = False
       end
@@ -218,7 +218,7 @@ object Form3: TForm3
         Left = 4
         Height = 18
         Top = 205
-        Width = 213
+        Width = 219
         Caption = 'Icons and Logo by Alex Klepatsch'
         ParentColor = False
       end
@@ -226,15 +226,15 @@ object Form3: TForm3
         Left = 52
         Height = 18
         Top = 174
-        Width = 44
+        Width = 46
         Caption = 'JNavas'
         ParentColor = False
       end
     end
     object Page2: TPage
       Caption = 'FFmpeg'
-      ClientWidth = 369
-      ClientHeight = 234
+      ClientWidth = 365
+      ClientHeight = 235
       object Label5: TLabel
         Left = 4
         Height = 18
@@ -296,13 +296,13 @@ object Form3: TForm3
     end
     object Page3: TPage
       Caption = 'Thanks'
-      ClientWidth = 369
-      ClientHeight = 234
+      ClientWidth = 365
+      ClientHeight = 235
       object ListBox1: TListBox
         Left = 0
-        Height = 234
+        Height = 235
         Top = 0
-        Width = 369
+        Width = 365
         Align = alClient
         ClickOnSelChange = False
         ItemHeight = 0
