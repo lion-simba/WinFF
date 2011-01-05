@@ -18,30 +18,28 @@ msgstr "Добавить"
 
 #: unit1.rsallcategories
 msgid "(All Categories)"
-msgstr "Все категории"
+msgstr "(Все категории)"
 
 #: unit1.rscheckbox2
 msgid "Deinterlace"
-msgstr "Гребёнка (Deinterlace)"
+msgstr "Деинтерлейсинг"
 
 #: unit1.rsclearbtn
 msgid "Clear"
 msgstr "Очистить"
 
 #: unit1.rsclose
-#, fuzzy
 msgid "Close"
 msgstr "Закрыть"
 
 #: unit1.rsclosebtn
-#, fuzzy
 msgctxt "unit1.rsclosebtn"
 msgid "Options"
 msgstr "Настройки"
 
 #: unit1.rsconverting
 msgid "Converting"
-msgstr "Конвертировать"
+msgstr "Преобразование"
 
 #: unit1.rscouldnotfindffmpeg
 msgid "Could not find FFmpeg."
@@ -57,7 +55,7 @@ msgstr "Не найден файл."
 
 #: unit1.rscouldnotfindpresetfile
 msgid "Could not find presets file."
-msgstr "Не найден Пресет файл."
+msgstr "Не найден файл с параметрами."
 
 #: unit1.rscropbottom
 msgid "Bottom"
@@ -77,25 +75,24 @@ msgstr "Сверху"
 
 #: unit1.rsdisplaycmdline
 msgid "Display CMD Line"
-msgstr "Использовать командную строку"
+msgstr "Показывать сценарий преобразования перед запуском"
 
 #: unit1.rsextensionnoperiod
 msgid "Extension can not contain a period"
-msgstr "Продолжение не должно содержать период"
+msgstr "Расширение файла не должно содержать точку"
 
 #: unit1.rsfiledoesnotexist
 msgid "file does not exist"
-msgstr "Файл не существует"
+msgstr "файл не существует"
 
 #: unit1.rsfilemenu
 msgid "File"
 msgstr "Файл"
 
 #: unit1.rsgroupbox1
-#, fuzzy
 msgctxt "unit1.rsgroupbox1"
 msgid "Additional Options"
-msgstr "Дополнительные настройки"
+msgstr "Дополнительные параметры"
 
 #: unit1.rshint2pass
 msgid "Using two passes allows the encoder to gather information in the first run for enhanced quality."
@@ -103,7 +100,7 @@ msgstr "Двухпроходное кодирование позволяет у�
 
 #: unit1.rshintadd
 msgid "add file(s) to the list for conversion"
-msgstr "добавить файл(ы) в список для конвертации"
+msgstr "добавить файл(ы) в список преобразования"
 
 #: unit1.rshintaspectratio
 msgid "(<integer:integer> or <real>) the physical aspect ratio (DAR) of the target display."
@@ -116,96 +113,97 @@ msgstr "(<целое>kb) битрейт в килобитах в секунду"
 
 #: unit1.rshintaudiochannels
 msgid "(<integer>) number of audio channels"
-msgstr "(<целое>) число аудио-каналов"
+msgstr "(<целое>) количество аудио-каналов"
 
 #: unit1.rshintclear
 msgid "remove all files from the list"
-msgstr ""
+msgstr "удалить все файлы из списка"
 
 #: unit1.rshintconvert
 msgid "start the conversion process"
-msgstr ""
+msgstr "начать процесс преобразования"
 
 #: unit1.rshintconvertto
 msgid "name of the device or file type the video should be converted to"
-msgstr ""
+msgstr "название устройства или тип файла, в который нужно преобразовать видео"
 
 #: unit1.rshintdeinterlace
+#, fuzzy
 msgid "removes interlacing from the video (if necessary)"
-msgstr ""
+msgstr "убирает чересстрочную развертку (если это необходимо)"
 
 #: unit1.rshintdevicepreset
 msgid "specific setting to use for the chosen device or file type"
-msgstr ""
+msgstr "конкретные параметры для выбранного устройства или типа файла"
 
 #: unit1.rshintframerate
 msgid "(<real> or <integer>) the number of frames per second"
-msgstr ""
+msgstr "(<вещественное> или <целое>) количество кадров в секунду"
 
 #: unit1.rshintoptions
 msgid "open or close the additional option window"
-msgstr ""
+msgstr "открыть или закрыть окно дополнительных параметров"
 
 #: unit1.rshintoutputfolder
 msgid "the target location for the final video (choose a different folder than the source folder)"
-msgstr ""
+msgstr "расположение готового видео (выберите папку, отличную от исходной)"
 
 #: unit1.rshintplay
 msgid "preview the selected source file with ffplay (good test to see if conversion is possible)"
-msgstr ""
+msgstr "воспроизвести выбранный файл с помощью ffplay (хороший способ проверить, возможно ли его преобразование)"
 
 #: unit1.rshintpreview
 msgid "preview using the output settings"
-msgstr ""
+msgstr "предварительный просмотр результата"
 
 #: unit1.rshintremove
 msgid "remove the selected file(s) from the list"
-msgstr ""
+msgstr "удалить выбранные файлы из списка"
 
 #: unit1.rshintsamplerate
 msgid "(<integer>) the sampling frequency of the audio in Hertz"
-msgstr ""
+msgstr "(<целое>) частота дискретизации аудио в Герцах"
 
 #: unit1.rshintvideobitrate
+#, fuzzy
 msgctxt "unit1.rshintvideobitrate"
 msgid "(<integer>kb) the target kilobits/second that the stream should use"
-msgstr ""
+msgstr "(<целое>кб) скорость данных для потока в килобитах в секунду"
 
 #: unit1.rshintvideosize
+#, fuzzy
 msgid "(<integer> X <integer>) the amount of pixels of information. For codecs that don't support pixel aspect ratio (PAR) this is the size of the video when viewed."
-msgstr ""
+msgstr "(<целое> X <целое>) размер изображения в пикселях."
 
 #: unit1.rsimportmenu
 msgid "Import Preset"
-msgstr "Импортируйте пресет"
+msgstr "Импортировать параметры..."
 
 #: unit1.rsinvalidpreset
 msgid "Invalid Preset File"
-msgstr "Не корректный Пресет файл"
+msgstr "Некорректный файл параметров"
 
 #: unit1.rslabel1
 msgid "Convert To ..."
-msgstr "Конвертировать в ..."
+msgstr "Преобразовать в ..."
 
 #: unit1.rslabel10
 msgid "Audio Channels"
-msgstr "Аудио каналы"
+msgstr "Аудио-каналы"
 
 #: unit1.rslabel11
-#, fuzzy
 msgctxt "unit1.rslabel11"
 msgid "Output Folder"
-msgstr "Путь для вывода"
+msgstr "Сохранить в папку:"
 
 #: unit1.rslabel19
 msgid "Device Preset"
-msgstr "Пресет"
+msgstr "Параметры:"
 
 #: unit1.rslabel2
-#, fuzzy
 msgctxt "unit1.rslabel2"
 msgid "Output Folder"
-msgstr "Путь для вывода"
+msgstr "Сохранить в папку:"
 
 #: unit1.rslabel3
 msgid "Video Bitrate"
@@ -229,30 +227,29 @@ msgstr "Аудио битрейт"
 
 #: unit1.rslabel8
 msgid "Sample Rate"
-msgstr "Частота аудио"
+msgstr "Частота дискретизации"
 
 #: unit1.rsmenuitem1
 msgid "Edit"
-msgstr "Редактирование"
+msgstr "Правка"
 
 #: unit1.rsmenuitem2
 msgctxt "unit1.rsmenuitem2"
 msgid "About"
-msgstr ""
+msgstr "О программе..."
 
 #: unit1.rsmenuitem3
 msgid "Exit"
-msgstr "Выйти"
+msgstr "Выход"
 
 #: unit1.rsmenuitem4
-#, fuzzy
 msgctxt "unit1.rsmenuitem4"
 msgid "Presets"
-msgstr "Предварителльные настройки (Пресеты)"
+msgstr "Параметры..."
 
 #: unit1.rsmenuitem5
 msgid "Preferences"
-msgstr "Предпочтения"
+msgstr "Настройки..."
 
 #: unit1.rsmenuitem6
 msgid "Help"
@@ -260,12 +257,12 @@ msgstr "Помощь"
 
 #: unit1.rsmenuitem7
 msgid "WinFF Forums"
-msgstr ""
+msgstr "Форум WinFF"
 
 #: unit1.rsmitabout
 msgctxt "unit1.rsmitabout"
 msgid "About"
-msgstr ""
+msgstr "О программе..."
 
 #: unit1.rsmitdocs
 msgid "Documentation"
@@ -273,77 +270,73 @@ msgstr "Документация"
 
 #: unit1.rsmitWinff
 msgid "WinFF Website"
-msgstr ""
+msgstr "Вебсайт WinFF"
 
 #: unit1.rsnamemustbeallpha
 msgid "Name Must be alphanumeric (a-z,A-Z,0-9)"
-msgstr "Имя Должно быть буквенно-цифровым (a-z,A-Z,0-9)"
+msgstr "Имя должно быть буквнено-цифровым (a-z,A-Z,0-9)"
 
 #: unit1.rsoptions
-#, fuzzy
 msgctxt "unit1.rsoptions"
 msgid "Options"
 msgstr "Настройки"
 
 #: unit1.rsoptionsbtn
-#, fuzzy
 msgctxt "unit1.rsoptionsbtn"
 msgid "Options"
 msgstr "Настройки"
 
 #: unit1.rspass2
 msgid "2 pass"
-msgstr "2-Прохода"
+msgstr "2 прохода"
 
 #: unit1.rspauseonfinish
 msgid "Pause on Finish"
-msgstr "Пауза по Окончании задания"
+msgstr "Пауза по завершению"
 
 #: unit1.rsplay
 msgid "Play"
-msgstr "Играть"
+msgstr "Воспроизвести"
 
 #: unit1.rsplaysoundonfinish
-#, fuzzy
 msgid "Play Sound on Finish"
-msgstr "Пауза по Окончании задания"
+msgstr "Звуковой сигнал по завершению"
 
 #: unit1.rspleaseadd1file
 msgid "Please add at least 1 file to convert"
-msgstr "Добавьте как минимум 1 файл для Конвертирования"
+msgstr "Нет файлов для преобразования"
 
 #: unit1.rspleaseselectapreset
-#, fuzzy
 msgid "Please select a preset"
-msgstr "Выберите Пресет для экспорта"
+msgstr "Выберите настройки преобразования"
 
 #: unit1.rspresetalreadyexist
 msgid "Preset: %s%s%s already exists"
-msgstr "Пресет: %s%s%s уже существует"
+msgstr "Предустановка %s%s%s уже существует"
 
 #: unit1.rspresethasnoext
 msgid "The preset to import does not have an extension"
-msgstr "Не возможно импортировать данный Пресет. Не имеет продолжения"
+msgstr "В импортируемых настройках отсутствует расширение"
 
 #: unit1.rspresethasnolabel
 msgid "The preset to import does not have a label"
-msgstr "Не возможно импортировать данный Пресет из-за отсутствия ярлыка"
+msgstr "В импортируемых настройках отсутствует описание"
 
 #: unit1.rspresettoexport
 msgid "Please select a preset to export"
-msgstr "Выберите Пресет для экспорта"
+msgstr "Выберите настройки для экспорта"
 
 #: unit1.rspresetwithlabelexists
 msgid "Preset with label: %s%s%s already exists"
-msgstr "Пресет с ярлыком: %s%s%s уже существует"
+msgstr "Настройки с описанием %s%s%s уже существуют"
 
 #: unit1.rspressenter
 msgid "Press Enter to Continue"
-msgstr "Нажмите Ввод для Продолжения"
+msgstr "Нажмите Ввод для продолжения"
 
 #: unit1.rspreview
 msgid "Preview"
-msgstr ""
+msgstr "Предпросмотр"
 
 #: unit1.rsremovebtn
 msgid "Remove"
@@ -351,107 +344,103 @@ msgstr "Удалить"
 
 #: unit1.rsselectpresetfile
 msgid "Select Preset File"
-msgstr "Выбирите пресет файл"
+msgstr "Выберите файл с параметрами"
 
 #: unit1.rsselectvideofiles
 msgid "Select Video Files"
-msgstr "Выбирите видео файл"
+msgstr "Выберите видео файл(ы)"
 
 #: unit1.rsshowoptions
-#, fuzzy
 msgctxt "unit1.rsshowoptions"
 msgid "Additional Options"
-msgstr "Дополнительные настройки"
+msgstr "Дополнительные параметры"
 
 #: unit1.rsshutdownonfinish
 msgid "Shutdown on Finish"
-msgstr "Выключить по Окончании задания"
+msgstr "Выключить компьютер по завершению"
 
 #: unit1.rsstartbtn
 msgid "Convert"
-msgstr "Конверт"
+msgstr "Преобразовать"
 
 #: unit1.rsthepresethasillegalchars
 msgid "The preset contains illegal characters"
-msgstr "Пресет содержит недопустимые символы"
+msgstr "Имя настроек содержит недопустимые символы"
 
 #: unit1.tabpage1caption
 msgid "Output Details"
-msgstr "Укажите детали для вывода"
+msgstr "Настройки преобразования"
 
 #: unit1.tabpage2caption
 msgid "Video Settings"
-msgstr "Видео настройки"
+msgstr "Видео"
 
 #: unit1.tabpage3caption
 msgid "Audio Settings"
-msgstr "Аудио настройки"
+msgstr "Аудио"
 
 #: unit1.tabpage4caption
 msgid "Additional Command Line Parameters (Advanced)"
-msgstr "Дополнительные параметры командной строки"
+msgstr "Аргументы FFmpeg"
 
 #: unit1.tabpage5caption
 msgid "Crop"
-msgstr ""
+msgstr "Обрезка"
 
 #: unit2.rsaddpresetbtn
 msgid "Add / Update"
 msgstr "Добавить / Заменить"
 
 #: unit2.rscancelbtn
-#, fuzzy
 msgctxt "unit2.rscancelbtn"
 msgid "Cancel"
 msgstr "Отмена"
 
 #: unit2.rscreatepreset
 msgid "Create Preset:"
-msgstr "Создать пресет"
+msgstr "Сохранить параметры?"
 
 #: unit2.rsdeletebtn
 msgid "Delete"
 msgstr "Удалить"
 
 #: unit2.rsexport
-#, fuzzy
 msgctxt "unit2.rsexport"
 msgid "Export"
-msgstr "Экспорт"
+msgstr "Экспорт..."
 
 #: unit2.rsform2
 msgid "Edit Presets"
-msgstr "Редактировать пресет"
+msgstr "Редактировать параметры"
 
 #: unit2.rsimport
 msgid "Import"
-msgstr "Импорт"
+msgstr "Импорт..."
 
 #: unit2.rsimportpresets
 msgid "Import Presets"
-msgstr "Импорт пресета"
+msgstr "Импортировать параметры"
 
 #: unit2.rslabel1
-#, fuzzy
 msgctxt "unit2.rslabel1"
 msgid "Presets"
-msgstr "Предварителльные настройки (Пресеты)"
+msgstr "Параметры"
 
 #: unit2.rslabel2
 msgid "Preset Name (One word , Only A-z 0-9)"
-msgstr "Имя Пресета (Одно слово , Только A-z 0-9)"
+msgstr "Название параметров (одно слово, только A-z 0-9)"
 
 #: unit2.rslabel3
 msgid "Preset Label"
-msgstr "Ярлык для Пресета"
+msgstr "Описание параметров"
 
 #: unit2.rslabel4
 msgid "Preset Command Line (no -i or output file)"
-msgstr "Пресет в командной строке (не -i или выходной файл)"
+msgstr "Аргументы ffmpeg (без -i и выходного файла)"
 
 #: unit2.rslabel5
 msgid "Output File Extension (no \".\")"
-msgstr "Продолжить вывод Файла (не \".\")"
+msgstr "Расширение выходного файла (без \".\")"
 
 #: unit2.rslabel6
 msgid "Category"
@@ -459,7 +448,7 @@ msgstr "Категория"
 
 #: unit2.rslabelmustbeunique
 msgid "Label must be unique."
-msgstr "Ярлык должен быть уникален."
+msgstr "Описание должно быть уникальным."
 
 #: unit2.rsokbtn
 #, fuzzy
@@ -468,107 +457,104 @@ msgstr "Сохранить"
 
 #: unit2.rsremovepreset
 msgid "Remove Preset:"
-msgstr "Переместите Пресет:"
+msgstr "Удалить настройки?"
 
 #: unit2.rsupdatepreset
 msgid "Update Preset:"
-msgstr "Заменить Пресет:"
+msgstr "Заменить настройки?"
 
 #: unit2.rsyoumustenterextension
 msgid "You must enter the extension."
-msgstr "Вы должны ввести продолжение."
+msgstr "Необходимо ввести расширение."
 
 #: unit2.rsyoumustenterlabel
 msgid "You must enter a label."
-msgstr "Вы должны ввести ярлык."
+msgstr "Необходимо ввести описание."
 
 #: unit2.rsyoumustenternmae
 msgid "You must enter a name."
-msgstr "Вы должны ввести имя."
+msgstr "Необходимо ввести имя."
 
 #: unit3.rsbutton1
 msgctxt "unit3.rsbutton1"
 msgid "OK"
-msgstr "Согласен"
+msgstr "OK"
 
 #: unit3.rsform3
 msgid "About WinFF"
-msgstr ""
+msgstr "О программе WinFF"
 
 #: unit3.rslabel8
 msgid "FFmpeg builds by"
-msgstr ""
+msgstr "Сборка FFmpeg:"
 
 #: unit3.rspage1
 msgid "WinFF"
-msgstr ""
+msgstr "WinFF"
 
 #: unit3.rspage2
 msgid "FFmpeg"
-msgstr ""
+msgstr "FFmpeg"
 
 #: unit3.rspage3
 msgid "Thanks"
 msgstr "Спасибо"
 
 #: unit4.rsbutton1
-#, fuzzy
 msgctxt "unit4.rsbutton1"
 msgid "OK"
-msgstr "Согласен"
+msgstr "ОК"
 
 #: unit4.rsbutton2
-#, fuzzy
 msgctxt "unit4.rsbutton2"
 msgid "Cancel"
 msgstr "Отмена"
 
 #: unit4.rscheckbox1
 msgid "Remember Last Directory Used"
-msgstr "Запомнить последний используемый директорий"
+msgstr "Запоминать последний использованный"
 
 #: unit4.rscheckbox2
 msgid "Use CHCP for international characters"
-msgstr "Используйте CHCP с международными символами"
+msgstr "Устанавливать кодировку терминала с помощью CHCP"
 
 #: unit4.rscheckbox3
 msgid "Multithreading for Dual Core Processors"
-msgstr "Многопоточность для  Dual Core процессоров"
+msgstr "Использовать несколько потоков:"
 
 #: unit4.rsform4
 msgid "WinFF Preferences"
-msgstr "WinFF Предпочтения"
+msgstr "Настройки WinFF"
 
 #: unit4.rslabel1
 msgid "Default Destination Directory"
-msgstr "Каталог по умолчанию"
+msgstr "Каталог для сохранения по умолчанию"
 
 #: unit4.rslabel2
 msgid "Path to FFmpeg.exe"
-msgstr "Путь для FFmpeg.exe"
+msgstr "Путь к FFmpeg.exe"
 
 #: unit4.rslabel3
 msgid "Path to FFPlay.exe"
-msgstr "Путь для FFPlay.exe"
+msgstr "Путь к FFPlay.exe"
 
 #: unit4.rslabel4
 msgid "Path to FFmpeg Executable"
-msgstr "Путь для Выполняемого FFmpeg"
+msgstr "Путь к FFmpeg"
 
 #: unit4.rslabel5
 msgid "Path to FFPlay Executable"
-msgstr "Путь для Выполняемого FFPlay"
+msgstr "Путь к FFPlay"
 
 #: unit4.rslabel6
 msgid "Terminal to run FFmpeg"
-msgstr "Терминал для управления FFmpeg"
+msgstr "Терминал для запуска FFmpeg"
 
 #: unit4.rslabel7
 msgid "Terminal Options (-e for Xterm , -x for Gnome Terminal"
-msgstr "Выберите для Терминала (-e для Xterm , -x для Gnome Terminal"
+msgstr "Аргументы для терминала (-e для Xterm , -x для Gnome Terminal)"
 
 #: unit4.rslabel8
-#, fuzzy
 msgctxt "unit4.rslabel8"
 msgid "Priority"
 msgstr "Приоритет"
@@ -579,11 +565,11 @@ msgstr "Общие"
 
 #: unit4.rspage2
 msgid "Ms Windows"
-msgstr "Мисс Windows"
+msgstr "MS Windows"
 
 #: unit4.rspage3
 msgid "Linux"
-msgstr "Мистер Linux"
+msgstr "Linux"
 
 #: unit4.rspriorityhigh
 msgid "High"
@@ -598,32 +584,29 @@ msgid "Normal"
 msgstr "Нормальный"
 
 #: unit5.rsbutton1
-#, fuzzy
 msgctxt "unit5.rsbutton1"
 msgid "OK"
-msgstr "Согласен"
+msgstr "ОК"
 
 #: unit5.rsform5
 msgid "FFmpeg Command Line"
-msgstr "FFmpeg Командная строка"
+msgstr "Сценарий FFmpeg"
 
 #: unit6.rscancelbtn
-#, fuzzy
 msgctxt "unit6.rscancelbtn"
 msgid "Cancel"
 msgstr "Отмена"
 
 #: unit6.rsexportbtn
-#, fuzzy
 msgctxt "unit6.rsexportbtn"
 msgid "Export"
 msgstr "Экспорт"
 
 #: unit6.rsform6
 msgid "Export Presets"
-msgstr "Экспорт пресетов"
+msgstr "Экспорт параметров"
 
 #: unit6.rslabel1
 msgid "Choose presets to export"
-msgstr "Выбирите пресет для экспорта"
+msgstr "Выберите параметры для экспорта"
 
