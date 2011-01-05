@@ -30,14 +30,11 @@ msgstr "Очистить"
 
 #: unit1.rsclose
 #, fuzzy
-#| msgid "Close"
-msgctxt "unit1.rsclose"
 msgid "Close"
 msgstr "Закрыть"
 
 #: unit1.rsclosebtn
 #, fuzzy
-#| msgid "Options"
 msgctxt "unit1.rsclosebtn"
 msgid "Options"
 msgstr "Настройки"
@@ -71,7 +68,6 @@ msgid "Left"
 msgstr "Слева"
 
 #: unit1.rscropright
-#| msgid "High"
 msgid "Right"
 msgstr "Справа"
 
@@ -97,7 +93,6 @@ msgstr "Файл"
 
 #: unit1.rsgroupbox1
 #, fuzzy
-#| msgid "Additional Options"
 msgctxt "unit1.rsgroupbox1"
 msgid "Additional Options"
 msgstr "Дополнительные настройки"
@@ -122,10 +117,6 @@ msgstr "(<целое>kb) битрейт в килобитах в секунду"
 #: unit1.rshintaudiochannels
 msgid "(<integer>) number of audio channels"
 msgstr "(<целое>) число аудио-каналов"
-
-#: unit1.rshintaudiosync
-msgid "(<integer>) Audio Sync = DON\"T KNOW THE HINT TEXT!"
-msgstr ""
 
 #: unit1.rshintclear
 msgid "remove all files from the list"
@@ -167,24 +158,12 @@ msgstr ""
 msgid "preview using the output settings"
 msgstr ""
 
-#: unit1.rshintrecord
-msgid "<hh:mm:ss> - Amount of time to record"
-msgstr ""
-
 #: unit1.rshintremove
 msgid "remove the selected file(s) from the list"
 msgstr ""
 
 #: unit1.rshintsamplerate
 msgid "(<integer>) the sampling frequency of the audio in Hertz"
-msgstr ""
-
-#: unit1.rshintseek
-msgid "<hh:mm:ss> - Begin recording at start time"
-msgstr ""
-
-#: unit1.rshinttime
-msgid "Make sure that the start time + time to record is less than total length of job"
 msgstr ""
 
 #: unit1.rshintvideobitrate
@@ -194,10 +173,6 @@ msgstr ""
 
 #: unit1.rshintvideosize
 msgid "(<integer> X <integer>) the amount of pixels of information. For codecs that don't support pixel aspect ratio (PAR) this is the size of the video when viewed."
-msgstr ""
-
-#: unit1.rshintvolume
-msgid "(<integer>) Current Volume = 256, 128 = half volume, 512 = double volume"
 msgstr ""
 
 #: unit1.rsimportmenu
@@ -218,7 +193,6 @@ msgstr "Аудио каналы"
 
 #: unit1.rslabel11
 #, fuzzy
-#| msgid "Output Folder"
 msgctxt "unit1.rslabel11"
 msgid "Output Folder"
 msgstr "Путь для вывода"
@@ -229,32 +203,9 @@ msgstr "Пресет"
 
 #: unit1.rslabel2
 #, fuzzy
-#| msgid "Output Folder"
 msgctxt "unit1.rslabel2"
 msgid "Output Folder"
 msgstr "Путь для вывода"
-
-#: unit1.rslabel20
-msgid "Volume"
-msgstr ""
-
-#: unit1.rslabel21
-#, fuzzy
-#| msgid "Audio Settings"
-msgid "Audio Sync"
-msgstr "Аудио настройки"
-
-#: unit1.rslabel22
-msgid "Seek to"
-msgstr ""
-
-#: unit1.rslabel23
-msgid "Time to Record"
-msgstr ""
-
-#: unit1.rslabel24
-msgid "Hours / Minutes / Seconds"
-msgstr ""
 
 #: unit1.rslabel3
 msgid "Video Bitrate"
@@ -295,7 +246,6 @@ msgstr "Выйти"
 
 #: unit1.rsmenuitem4
 #, fuzzy
-#| msgid "Presets"
 msgctxt "unit1.rsmenuitem4"
 msgid "Presets"
 msgstr "Предварителльные настройки (Пресеты)"
@@ -321,7 +271,7 @@ msgstr ""
 msgid "Documentation"
 msgstr "Документация"
 
-#: unit1.rsmitwinff
+#: unit1.rsmitWinff
 msgid "WinFF Website"
 msgstr ""
 
@@ -331,14 +281,12 @@ msgstr "Имя Должно быть буквенно-цифровым (a-z,A-Z,
 
 #: unit1.rsoptions
 #, fuzzy
-#| msgid "Options"
 msgctxt "unit1.rsoptions"
 msgid "Options"
 msgstr "Настройки"
 
 #: unit1.rsoptionsbtn
 #, fuzzy
-#| msgid "Options"
 msgctxt "unit1.rsoptionsbtn"
 msgid "Options"
 msgstr "Настройки"
@@ -357,7 +305,6 @@ msgstr "Играть"
 
 #: unit1.rsplaysoundonfinish
 #, fuzzy
-#| msgid "Pause on Finish"
 msgid "Play Sound on Finish"
 msgstr "Пауза по Окончании задания"
 
@@ -367,7 +314,6 @@ msgstr "Добавьте как минимум 1 файл для Конверт�
 
 #: unit1.rspleaseselectapreset
 #, fuzzy
-#| msgid "Please select a preset to export"
 msgid "Please select a preset"
 msgstr "Выберите Пресет для экспорта"
 
@@ -403,12 +349,6 @@ msgstr ""
 msgid "Remove"
 msgstr "Удалить"
 
-#: unit1.rsselectdirectory
-#, fuzzy
-#| msgid "Default Destination Directory"
-msgid "Select Directory"
-msgstr "Каталог по умолчанию"
-
 #: unit1.rsselectpresetfile
 msgid "Select Preset File"
 msgstr "Выбирите пресет файл"
@@ -419,7 +359,6 @@ msgstr "Выбирите видео файл"
 
 #: unit1.rsshowoptions
 #, fuzzy
-#| msgid "Additional Options"
 msgctxt "unit1.rsshowoptions"
 msgid "Additional Options"
 msgstr "Дополнительные настройки"
@@ -462,7 +401,6 @@ msgstr "Добавить / Заменить"
 
 #: unit2.rscancelbtn
 #, fuzzy
-#| msgid "Cancel"
 msgctxt "unit2.rscancelbtn"
 msgid "Cancel"
 msgstr "Отмена"
@@ -477,7 +415,6 @@ msgstr "Удалить"
 
 #: unit2.rsexport
 #, fuzzy
-#| msgid "Export"
 msgctxt "unit2.rsexport"
 msgid "Export"
 msgstr "Экспорт"
@@ -496,7 +433,6 @@ msgstr "Импорт пресета"
 
 #: unit2.rslabel1
 #, fuzzy
-#| msgid "Presets"
 msgctxt "unit2.rslabel1"
 msgid "Presets"
 msgstr "Предварителльные настройки (Пресеты)"
@@ -527,8 +463,6 @@ msgstr "Ярлык должен быть уникален."
 
 #: unit2.rsokbtn
 #, fuzzy
-#| msgid "Save"
-msgctxt "unit2.rsokbtn"
 msgid "Save"
 msgstr "Сохранить"
 
@@ -579,15 +513,12 @@ msgstr "Спасибо"
 
 #: unit4.rsbutton1
 #, fuzzy
-#| msgctxt "unit3.rsbutton1"
-#| msgid "OK"
 msgctxt "unit4.rsbutton1"
 msgid "OK"
 msgstr "Согласен"
 
 #: unit4.rsbutton2
 #, fuzzy
-#| msgid "Cancel"
 msgctxt "unit4.rsbutton2"
 msgid "Cancel"
 msgstr "Отмена"
@@ -638,7 +569,7 @@ msgstr "Выберите для Терминала (-e для Xterm , -x для 
 
 #: unit4.rslabel8
 #, fuzzy
-#| msgid "Priority"
+msgctxt "unit4.rslabel8"
 msgid "Priority"
 msgstr "Приоритет"
 
@@ -668,50 +599,22 @@ msgstr "Нормальный"
 
 #: unit5.rsbutton1
 #, fuzzy
-#| msgctxt "unit3.rsbutton1"
-#| msgid "OK"
 msgctxt "unit5.rsbutton1"
 msgid "OK"
 msgstr "Согласен"
-
-#: unit5.rsclip
-msgid "Clipboard"
-msgstr ""
-
-#: unit5.rsclip2
-#, fuzzy
-#| msgid "Close"
-msgctxt "unit5.rsclip2"
-msgid "Close"
-msgstr "Закрыть"
-
-#: unit5.rscontinue
-#, fuzzy
-#| msgid "Converting"
-msgid "Continue"
-msgstr "Конвертировать"
 
 #: unit5.rsform5
 msgid "FFmpeg Command Line"
 msgstr "FFmpeg Командная строка"
 
-#: unit5.rssave
-#, fuzzy
-#| msgid "Save"
-msgctxt "unit5.rssave"
-msgid "Save"
-msgstr "Сохранить"
-
 #: unit6.rscancelbtn
 #, fuzzy
-#| msgid "Cancel"
 msgctxt "unit6.rscancelbtn"
 msgid "Cancel"
 msgstr "Отмена"
 
 #: unit6.rsexportbtn
 #, fuzzy
-#| msgid "Export"
 msgctxt "unit6.rsexportbtn"
 msgid "Export"
 msgstr "Экспорт"
@@ -723,7 +626,4 @@ msgstr "Экспорт пресетов"
 #: unit6.rslabel1
 msgid "Choose presets to export"
 msgstr "Выбирите пресет для экспорта"
-
-#~ msgid "Replace Preset"
-#~ msgstr "Сменить пресет"
 
