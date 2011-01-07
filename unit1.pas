@@ -28,7 +28,8 @@ uses
   {$IFDEF unix} baseunix, unix, {$endif}
   laz_xmlcfg, dom, xmlread, xmlwrite, StdCtrls, Buttons, ActnList, Menus, unit2, unit3,
   unit4, unit5, gettext, translations, process
-  {$IFDEF TRANSLATESTRING}, DefaultTranslator{$ENDIF}, ExtCtrls, ComCtrls, MaskEdit, Spin;
+  {$IFDEF TRANSLATESTRING}, DefaultTranslator{$ENDIF}, ExtCtrls, ComCtrls, MaskEdit, Spin,
+  PoTranslator;
 
 type
 
@@ -258,7 +259,7 @@ var
   pausescript: string;
   playscript: string;
   multithreading: string;
-  PODirectory, Lang, FallbackLang: String;
+  PODirectory, Lang, FallbackLang, POFile: String;
   preview: boolean;
   Resourcestring
 
@@ -303,9 +304,6 @@ begin
 
 
                // do translations
-   {$ifdef win32}PODirectory := extraspath + '\languages\'{$endif};
-   {$ifdef unix}PODirectory := '/usr/share/winff/languages/'{$endif};
-   GetLanguageIDs(Lang, FallbackLang); // in unit gettext
    TranslateUnitResourceStrings('unit1', PODirectory + 'winff.%s.po', Lang, FallbackLang);
 
                     // start setup
@@ -1621,6 +1619,7 @@ begin                                     // get setup
       // if continue pressed, attempt to execute user modified script;
       frmScript.Memo1.Lines:=script;
       frmScript.scriptfilename:= presetspath + batfile;
+      resmod := frmScript.ShowModal;
       if resmod = 1 then     // Continue Clicked;
       begin
 
@@ -1817,6 +1816,22 @@ end;
 
 initialization
   {$I unit1.lrs}
+  {$ifdef win32}PODirectory := extraspath + '\languages\'{$endif};
+  {$ifdef unix}PODirectory := '/usr/share/winff/languages/'{$endif};
+  GetLanguageIDs(Lang, FallbackLang); // in unit gettext
+  POFile := PODirectory + 'winff.' + Lang + '.po';
+  if not FileExists(POFile) then
+     POFile := PODirectory + 'winff.' + FallbackLang + '.po';
+
+  if FileExists(POFile) then
+  begin
+    try
+      LRSTranslator := TPoTranslator.Create(POFile);
+    except
+    end;
+  end
+  else
+    POFile := '';
 
 end.
 

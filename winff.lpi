@@ -50,7 +50,7 @@
         <PackageName Value="LCL"/>
       </Item2>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="winff.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -99,6 +99,11 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unit6"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="potranslator.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PoTranslator"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
