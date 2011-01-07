@@ -1,6 +1,7 @@
 unit Unit3; 
 
 // WInFF 1.0 Copyright 2006-2009 Matthew Weatherford
+// WinFF 1.3.2 Copyright 2011 Alexey Osipov <lion-simba@pridelands.ru>
 // http://winff.org
 // Licensed under the GPL v3 or any later version
 //
@@ -100,7 +101,7 @@ begin                  // do translations
     
                      // fill thank you memo
 
-    listbox1.items.Add('Translators');
+    listbox1.items.Add('Translators:');
     listbox1.items.Add('Nighto');
     listbox1.items.Add('Simeon Uzunov');
     listbox1.items.Add('Paul Gevers');
@@ -128,6 +129,7 @@ begin                  // do translations
     listbox1.items.add('Joe Black');
     listbox1.items.add('Göran Hannel');
     listbox1.items.add('大宝(DaBao)');
+    listbox1.items.add('Alexey Osipov');
 
 
 

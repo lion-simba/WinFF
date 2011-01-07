@@ -321,9 +321,9 @@ object frmMain: TfrmMain
   LCLVersion = '0.9.28.2'
   object Label2: TLabel
     Left = 0
-    Height = 23
+    Height = 24
     Top = 0
-    Width = 8
+    Width = 9
     ParentColor = False
   end
   object pnlMain: TPanel
@@ -342,7 +342,7 @@ object frmMain: TfrmMain
     TabOrder = 0
     object filelist: TListBox
       Left = 0
-      Height = 153
+      Height = 149
       Top = 0
       Width = 800
       Align = alClient
@@ -355,13 +355,13 @@ object frmMain: TfrmMain
     end
     object pnlbottom: TPanel
       Left = 0
-      Height = 182
-      Top = 153
+      Height = 186
+      Top = 149
       Width = 800
       Align = alBottom
       AutoSize = True
       BevelOuter = bvNone
-      ClientHeight = 182
+      ClientHeight = 186
       ClientWidth = 800
       ParentColor = False
       ParentShowHint = False
@@ -369,7 +369,7 @@ object frmMain: TfrmMain
       TabOrder = 1
       object grpOutputSettings: TGroupBox
         Left = 0
-        Height = 179
+        Height = 183
         Top = 3
         Width = 800
         Align = alTop
@@ -395,7 +395,7 @@ object frmMain: TfrmMain
           AnchorSideTop.Side = asrBottom
           Left = 13
           Height = 18
-          Top = 53
+          Top = 55
           Width = 766
           Align = alTop
           BorderSpacing.Left = 13
@@ -408,7 +408,7 @@ object frmMain: TfrmMain
           AnchorSideTop.Side = asrBottom
           Left = 13
           Height = 18
-          Top = 101
+          Top = 105
           Width = 766
           Align = alTop
           BorderSpacing.Left = 13
@@ -451,7 +451,7 @@ object frmMain: TfrmMain
         object Panel14: TPanel
           Left = 13
           Height = 27
-          Top = 119
+          Top = 123
           Width = 766
           Align = alTop
           AutoSize = True
@@ -494,7 +494,7 @@ object frmMain: TfrmMain
         object pnlSpacer: TPanel
           Left = 0
           Height = 13
-          Top = 146
+          Top = 150
           Width = 792
           Align = alTop
           BevelOuter = bvNone
@@ -1620,16 +1620,16 @@ object frmMain: TfrmMain
         object tabPageCrop: TPage
           Caption = 'Crop'
           ClientWidth = 784
-          ClientHeight = 116
+          ClientHeight = 113
           object Panel11: TPanel
             Left = 0
-            Height = 116
+            Height = 113
             Top = 0
             Width = 96
             Align = alLeft
             AutoSize = True
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 96
             TabOrder = 0
             object lblCropLeft: TLabel
@@ -1639,7 +1639,7 @@ object frmMain: TfrmMain
               AnchorSideBottom.Side = asrBottom
               Left = 0
               Height = 18
-              Top = 49
+              Top = 47
               Width = 26
               Caption = 'Left'
               Layout = tlCenter
@@ -1652,7 +1652,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrCenter
               Left = 31
               Height = 27
-              Top = 45
+              Top = 43
               Width = 48
               BorderSpacing.Left = 5
               OnChange = edtCropLeftChange
@@ -1668,7 +1668,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 79
               Height = 27
-              Top = 45
+              Top = 43
               Width = 17
               Associate = edtCropLeft
               Min = 0
@@ -1681,14 +1681,14 @@ object frmMain: TfrmMain
           end
           object Panel12: TPanel
             Left = 106
-            Height = 116
+            Height = 113
             Top = 0
             Width = 65
             Align = alLeft
             AutoSize = True
             BorderSpacing.Left = 10
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 65
             TabOrder = 1
             object lblCropTop: TLabel
@@ -1714,7 +1714,7 @@ object frmMain: TfrmMain
               AnchorSideBottom.Side = asrBottom
               Left = 0
               Height = 18
-              Top = 95
+              Top = 92
               Width = 65
               Alignment = taCenter
               Anchors = [akLeft, akRight, akBottom]
@@ -1762,7 +1762,7 @@ object frmMain: TfrmMain
               AnchorSideBottom.Control = lblCropBottom
               Left = 0
               Height = 27
-              Top = 65
+              Top = 62
               Width = 48
               Anchors = [akLeft, akRight, akBottom]
               BorderSpacing.Bottom = 3
@@ -1777,7 +1777,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 48
               Height = 27
-              Top = 65
+              Top = 62
               Width = 17
               Anchors = [akTop, akRight]
               Associate = edtCropBottom
@@ -1793,14 +1793,14 @@ object frmMain: TfrmMain
             AnchorSideLeft.Control = Panel12
             AnchorSideLeft.Side = asrBottom
             Left = 181
-            Height = 116
+            Height = 113
             Top = 0
             Width = 105
             Align = alLeft
             AutoSize = True
             BorderSpacing.Left = 10
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 105
             TabOrder = 2
             object lblCropRight: TLabel
@@ -1809,7 +1809,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Control = edtCropRight
               Left = 0
               Height = 18
-              Top = 49
+              Top = 47
               Width = 35
               Anchors = [akTop, akRight]
               BorderSpacing.Right = 5
@@ -1822,7 +1822,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Control = UpDown3
               Left = 40
               Height = 27
-              Top = 45
+              Top = 43
               Width = 48
               Anchors = [akTop, akRight]
               OnChange = edtCropRightChange
@@ -1836,7 +1836,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 88
               Height = 27
-              Top = 45
+              Top = 43
               Width = 17
               Anchors = [akTop, akRight]
               Associate = edtCropRight
@@ -1852,16 +1852,16 @@ object frmMain: TfrmMain
         object tabPageTime: TPage
           Caption = 'Time'
           ClientWidth = 784
-          ClientHeight = 116
+          ClientHeight = 113
           object Panel9: TPanel
             Left = 0
-            Height = 116
+            Height = 113
             Top = 0
             Width = 139
             Align = alLeft
             AutoSize = True
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 139
             Constraints.MinWidth = 100
             TabOrder = 0
@@ -1900,13 +1900,13 @@ object frmMain: TfrmMain
           object Panel10: TPanel
             AnchorSideLeft.Control = Panel9
             Left = 139
-            Height = 116
+            Height = 113
             Top = 0
             Width = 169
             Align = alLeft
             AutoSize = True
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 169
             Constraints.MinWidth = 100
             TabOrder = 1
@@ -2014,17 +2014,17 @@ object frmMain: TfrmMain
         object tabCmdLineSettings: TPage
           Caption = 'tabCmdLineSettings'
           ClientWidth = 784
-          ClientHeight = 116
+          ClientHeight = 113
           object Panel8: TPanel
             Left = 5
-            Height = 116
+            Height = 113
             Top = 0
             Width = 469
             Align = alLeft
             AutoSize = True
             BorderSpacing.Left = 5
             BevelOuter = bvNone
-            ClientHeight = 116
+            ClientHeight = 113
             ClientWidth = 469
             Constraints.MinWidth = 300
             TabOrder = 0

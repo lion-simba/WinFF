@@ -1,6 +1,7 @@
 unit Unit1; 
 
 // WInFF 1.0 Copyright 2006-2009 Matthew Weatherford
+// WinFF 1.3.2 Copyright 2011 Alexey Osipov <lion-simba@pridelands.ru>
 // http://winff.org
 // Licensed under the GPL v3 or any later version
 //

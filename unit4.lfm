@@ -175,7 +175,7 @@ object frmPreferences: TfrmPreferences
       end
       object Panel3: TPanel
         Left = 3
-        Height = 27
+        Height = 29
         Top = 116
         Width = 362
         Align = alTop
@@ -184,7 +184,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Top = 5
         BorderSpacing.Right = 3
         BevelOuter = bvNone
-        ClientHeight = 27
+        ClientHeight = 29
         ClientWidth = 362
         TabOrder = 3
         object Label8: TLabel
@@ -193,7 +193,7 @@ object frmPreferences: TfrmPreferences
           AnchorSideTop.Side = asrCenter
           Left = 0
           Height = 18
-          Top = 4
+          Top = 5
           Width = 51
           Caption = 'Priority'
           ParentColor = False
@@ -205,7 +205,7 @@ object frmPreferences: TfrmPreferences
           AnchorSideRight.Control = Panel3
           AnchorSideRight.Side = asrBottom
           Left = 56
-          Height = 27
+          Height = 29
           Top = 0
           Width = 306
           Anchors = [akTop, akLeft, akRight]
@@ -219,7 +219,7 @@ object frmPreferences: TfrmPreferences
     object Page2: TPage
       Caption = 'MS Windows'
       ClientWidth = 368
-      ClientHeight = 237
+      ClientHeight = 234
       object Label2: TLabel
         Left = 3
         Height = 18
@@ -342,7 +342,7 @@ object frmPreferences: TfrmPreferences
     object Page3: TPage
       Caption = 'Linux'
       ClientWidth = 368
-      ClientHeight = 237
+      ClientHeight = 234
       object Label4: TLabel
         Left = 3
         Height = 18
