@@ -1,9 +1,9 @@
 object frmMain: TfrmMain
   Left = 301
   Height = 670
-  Top = 176
+  Top = 291
   Width = 777
-  ActiveControl = nbkSettings
+  ActiveControl = Panel2
   AllowDropFiles = True
   Caption = 'WinFF'
   ClientHeight = 647
@@ -321,9 +321,9 @@ object frmMain: TfrmMain
   LCLVersion = '0.9.28.2'
   object Label2: TLabel
     Left = 0
-    Height = 22
+    Height = 23
     Top = 0
-    Width = 7
+    Width = 8
     ParentColor = False
   end
   object pnlMain: TPanel
@@ -359,92 +359,145 @@ object frmMain: TfrmMain
       Top = 222
       Width = 777
       Align = alBottom
+      AutoSize = True
       ClientHeight = 183
       ClientWidth = 777
       ParentColor = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
-      object PageControl1: TPageControl
+      object grpOutputSettings: TGroupBox
         Left = 1
-        Height = 181
-        Top = 1
+        Height = 179
+        Top = 4
         Width = 775
-        ActivePage = tabPage1
-        Align = alClient
-        TabIndex = 0
+        Align = alTop
+        AutoSize = True
+        BorderSpacing.Top = 3
+        Caption = 'Output Details'
+        ClientHeight = 159
+        ClientWidth = 767
         TabOrder = 0
-        object tabPage1: TTabSheet
-          Caption = 'tabPage1'
-          ClientHeight = 154
-          ClientWidth = 767
-          object Label1: TLabel
-            Left = 13
-            Height = 18
-            Top = 4
-            Width = 73
-            Align = alCustom
-            Caption = 'Convert to....'
-            ParentColor = False
-          end
-          object Label11: TLabel
-            Left = 13
-            Height = 18
-            Top = 103
-            Width = 110
-            Caption = 'Output folder'
-            ParentColor = False
-          end
-          object Label19: TLabel
-            Left = 13
-            Height = 18
-            Top = 53
-            Width = 46
-            Caption = 'Convert to....'
-            ParentColor = False
-          end
-          object PresetBox: TComboBox
-            Left = 13
-            Height = 29
-            Top = 69
-            Width = 472
-            ItemHeight = 0
-            MaxLength = 65535
-            OnChange = PresetBoxChange
-            Style = csDropDownList
-            TabOrder = 1
-          end
+        object Label1: TLabel
+          Left = 13
+          Height = 18
+          Top = 5
+          Width = 741
+          Align = alTop
+          BorderSpacing.Left = 13
+          BorderSpacing.Top = 5
+          BorderSpacing.Right = 13
+          Caption = 'Convert To ...'
+          ParentColor = False
+        end
+        object Label19: TLabel
+          AnchorSideTop.Side = asrBottom
+          Left = 13
+          Height = 18
+          Top = 53
+          Width = 741
+          Align = alTop
+          BorderSpacing.Left = 13
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 13
+          Caption = 'Device Preset'
+          ParentColor = False
+        end
+        object Label11: TLabel
+          AnchorSideTop.Side = asrBottom
+          Left = 13
+          Height = 18
+          Top = 101
+          Width = 741
+          Align = alTop
+          BorderSpacing.Left = 13
+          BorderSpacing.Top = 3
+          BorderSpacing.Right = 13
+          Caption = 'Output Folder'
+          ParentColor = False
+        end
+        object categorybox: TComboBox
+          AnchorSideTop.Side = asrBottom
+          Left = 13
+          Height = 27
+          Top = 23
+          Width = 741
+          Align = alTop
+          BorderSpacing.Left = 13
+          BorderSpacing.Right = 13
+          ItemHeight = 0
+          MaxLength = 65535
+          OnChange = categoryboxChange
+          Sorted = True
+          Style = csDropDownList
+          TabOrder = 0
+        end
+        object PresetBox: TComboBox
+          AnchorSideTop.Side = asrBottom
+          Left = 13
+          Height = 27
+          Top = 71
+          Width = 741
+          Align = alTop
+          BorderSpacing.Left = 13
+          BorderSpacing.Right = 13
+          ItemHeight = 0
+          MaxLength = 65535
+          OnChange = PresetBoxChange
+          Style = csDropDownList
+          TabOrder = 1
+        end
+        object Panel14: TPanel
+          Left = 13
+          Height = 27
+          Top = 119
+          Width = 741
+          Align = alTop
+          AutoSize = True
+          BorderSpacing.Left = 13
+          BorderSpacing.Right = 13
+          BevelOuter = bvNone
+          ClientHeight = 27
+          ClientWidth = 741
+          TabOrder = 2
           object DestFolder: TEdit
-            Left = 13
+            AnchorSideLeft.Control = Panel14
+            AnchorSideTop.Control = Panel14
+            AnchorSideRight.Control = ChooseFolderBtn
+            Left = 0
             Height = 27
-            Top = 120
-            Width = 439
-            TabOrder = 2
+            Top = 0
+            Width = 700
+            Anchors = [akTop, akLeft, akRight]
+            BorderSpacing.Right = 3
+            TabOrder = 0
           end
           object ChooseFolderBtn: TButton
-            Left = 453
-            Height = 25
-            Top = 120
-            Width = 32
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideTop.Control = Panel14
+            AnchorSideRight.Control = Panel14
+            AnchorSideRight.Side = asrBottom
+            Left = 703
+            Height = 27
+            Top = 0
+            Width = 38
+            Anchors = [akTop, akRight]
             BorderSpacing.InnerBorder = 4
             Caption = '...'
             Font.Style = [fsBold]
             OnClick = ChooseFolderBtnClick
             ParentFont = False
-            TabOrder = 3
+            TabOrder = 1
           end
-          object categorybox: TComboBox
-            Left = 13
-            Height = 29
-            Top = 20
-            Width = 472
-            ItemHeight = 0
-            MaxLength = 65535
-            OnChange = categoryboxChange
-            Sorted = True
-            Style = csDropDownList
-            TabOrder = 0
-          end
+        end
+        object pnlSpacer: TPanel
+          Left = 0
+          Height = 13
+          Top = 146
+          Width = 767
+          Align = alTop
+          BevelOuter = bvNone
+          TabOrder = 3
         end
       end
     end
@@ -1131,7 +1184,7 @@ object frmMain: TfrmMain
         Top = 0
         Width = 767
         Align = alClient
-        PageIndex = 4
+        PageIndex = 0
         TabOrder = 0
         object tabVideoSettings: TPage
           Caption = 'Video Settings'
@@ -1797,16 +1850,16 @@ object frmMain: TfrmMain
         object tabPageTime: TPage
           Caption = 'Time'
           ClientWidth = 759
-          ClientHeight = 114
+          ClientHeight = 111
           object Panel9: TPanel
             Left = 0
-            Height = 114
+            Height = 111
             Top = 0
             Width = 136
             Align = alLeft
             AutoSize = True
             BevelOuter = bvNone
-            ClientHeight = 114
+            ClientHeight = 111
             ClientWidth = 136
             Constraints.MinWidth = 100
             TabOrder = 0
@@ -1845,13 +1898,13 @@ object frmMain: TfrmMain
           object Panel10: TPanel
             AnchorSideLeft.Control = Panel9
             Left = 136
-            Height = 114
+            Height = 111
             Top = 0
             Width = 169
             Align = alLeft
             AutoSize = True
             BevelOuter = bvNone
-            ClientHeight = 114
+            ClientHeight = 111
             ClientWidth = 169
             Constraints.MinWidth = 100
             TabOrder = 1
@@ -2010,17 +2063,17 @@ object frmMain: TfrmMain
     Title = 'Select Video Files...'
     FilterIndex = 0
     Options = [ofAllowMultiSelect, ofEnableSizing, ofViewDetail]
-    left = 568
-    top = 368
+    left = 552
+    top = 8
   end
   object SelectDirectoryDialog1: TSelectDirectoryDialog
     FilterIndex = 0
-    left = 568
-    top = 312
+    left = 488
+    top = 8
   end
   object MainMenu1: TMainMenu
-    left = 688
-    top = 312
+    left = 520
+    top = 8
     object mnuFile: TMenuItem
       Caption = 'File'
       object mitImportPreset: TMenuItem
@@ -2093,7 +2146,7 @@ object frmMain: TfrmMain
   object dlgOpenPreset: TOpenDialog
     DefaultExt = '.wff'
     Filter = '.wff'
-    left = 688
-    top = 368
+    left = 584
+    top = 8
   end
 end

@@ -43,8 +43,8 @@ type
     categorybox: TComboBox;
     cbx2Pass: TCheckBox;
     cbxDeinterlace: TCheckBox;
-    ChooseFolderBtn: TButton;
     btnClear: TBitBtn;
+    ChooseFolderBtn: TButton;
     commandlineparams: TEdit;
     DestFolder: TEdit;
     edtAspectRatio: TEdit;
@@ -61,7 +61,11 @@ type
     edtTTRSS: TSpinEdit;
     edtVolume: TEdit;
     gbxSettings: TGroupBox;
+    grpOutputSettings: TGroupBox;
+    Label1: TLabel;
     Label10: TLabel;
+    Label11: TLabel;
+    Label19: TLabel;
     Label20: TLabel;
     Label21: TLabel;
     label22: TLabel;
@@ -85,9 +89,6 @@ type
     mitDisplayCmdline: TMenuItem;
     dlgOpenFile: TOpenDialog;
     filelist: TListBox;
-    Label1: TLabel;
-    Label11: TLabel;
-    Label19: TLabel;
     Label2: TLabel;
     mitDocs: TMenuItem;
     mitAbout: TMenuItem;
@@ -102,6 +103,8 @@ type
     Panel11: TPanel;
     Panel12: TPanel;
     Panel13: TPanel;
+    Panel14: TPanel;
+    pnlSpacer: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
     Panel4: TPanel;
@@ -110,8 +113,8 @@ type
     Panel7: TPanel;
     Panel8: TPanel;
     Panel9: TPanel;
+    PresetBox: TComboBox;
     StatusBar1: TStatusBar;
-    PageControl1: TPageControl;
     pnlTop: TPanel;
     btnPlay: TBitBtn;
     pnlbottom: TPanel;
@@ -119,7 +122,6 @@ type
     pnlMain: TPanel;
     mitPauseOnFinish: TMenuItem;
     mitPlaySoundOnFinish: TMenuItem;
-    PresetBox: TComboBox;
     btnRemove: TBitBtn;
     mitShutdownOnFinish: TMenuItem;
     mnuEdit: TMenuItem;
@@ -136,7 +138,6 @@ type
     btnConvert: TBitBtn;
     tabAudioSettings: TPage;
     tabCmdLineSettings: TPage;
-    tabPage1: TTabSheet;
     tabPageCrop: TPage;
     tabPageTime: TPage;
     tabVideoSettings: TPage;
@@ -442,7 +443,7 @@ begin
     lblCropRight.Caption:=rsCropRight;
     lblCropTop.Caption:=rsCropTop;
     lblCropBottom.Caption:=rsCropBottom;
-    tabPage1.Caption:=tabPage1caption;
+    grpOutputSettings.Caption:=tabPage1caption;
     tabVideoSettings.Caption:=tabPage2caption;
     tabAudioSettings.Caption:=tabPage3caption;
     tabCmdLineSettings.Caption:=tabPage4caption;
