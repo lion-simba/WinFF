@@ -261,92 +261,6 @@ var
   PODirectory, Lang, FallbackLang: String;
   preview: boolean;
   Resourcestring
-  // captions
-  rsAddBtn='Add';
-  rsLabel10='Audio Channels';
-  rsdisplaycmdline='Display CMD Line';
-  rspauseonfinish='Pause on Finish';
-  rsplaysoundonfinish='Play Sound on Finish';
-  rsshutdownonfinish='Shutdown on Finish';
-  rsoptionsbtn='Options';
-  rsclosebtn='Options';
-  rsStartBtn='Convert';
-  rsPlay='Play';
-  rsClearBtn='Clear';
-  rsRemoveBtn='Remove';
-  rsCheckBox2='Deinterlace';
-  rspass2='2 pass';
-  rsMenuItem1='Edit';
-  rsMenuItem2='About';
-  rsMenuItem3='Exit';
-  rsMenuItem4='Presets';
-  rsMenuItem5='Preferences';
-  rsMenuItem6='Help';
-  rsMenuItem7='WinFF Forums';
-  rsmitWinff='WinFF Website';
-  rsmitdocs='Documentation';
-  rsmitabout='About';
-  rsimportmenu='Import Preset';
-  rsshowoptions='Additional Options';
-  rsCropLeft='Left';
-  rsCropTop='Top';
-  rsCropBottom='Bottom';
-  rsCropRight='Right';
-  rsPreview='Preview';
-  rsOptions='Options';
-  rsClose='Close';
-  rsfilemenu='File';
-  //rsGroupBox2='Additional Command Line Parameters (Advanced)';
-
-  //Hints
-  rsHintAdd='add file(s) to the list for conversion';
-  rsHintRemove='remove the selected file(s) from the list';
-  rsHintClear='remove all files from the list';
-  rsHintPlay='preview the selected source file with ffplay (good test to see if conversion is possible)';
-  rsHintPreview='preview using the output settings';
-  rsHintConvert='start the conversion process';
-  rsHintOptions='open or close the additional option window';
-  rsHintConvertTo='name of the device or file type the video should be converted to';
-  rsHintDevicePreset='specific setting to use for the chosen device or file type';
-  rsHintOutputfolder='the target location for the final video (choose a different folder than the source folder)';
-  rsHintVideobitrate='(<integer>kb) the target kilobits/second that the stream should use';
-  rsHintAudiobitrate='(<integer>kb) the target kilobits/second that the stream should use';
-  rsHintFramerate='(<real> or <integer>) the number of frames per second';
-  rsHintVideosize='(<integer> X <integer>) the amount of pixels of information. For codecs that don''t support pixel aspect ratio (PAR) this is the size of the video when viewed.';
-  rsHintAspectratio='(<integer:integer> or <real>) the physical aspect ratio (DAR) of the target display.';
-  rsHint2pass='Using two passes allows the encoder to gather information in the first run for enhanced quality.';
-  rsHintDeinterlace='removes interlacing from the video (if necessary)';
-  rsHintSamplerate='(<integer>) the sampling frequency of the audio in Hertz';
-  rsHintAudiochannels='(<integer>) number of audio channels';
-  rsHintVolume='(<integer>) Current Volume = 256, 128 = half volume, 512 = double volume';
-  rsHintAudioSync='(<integer>) Audio Sync = from 10 up to audio bitrate such as 44100, 48000';
-  rsHintSeek='<hh:mm:ss> - Begin recording at start time';
-  rsHintRecord='<hh:mm:ss> - Amount of time to record';
-  rsHintTime='Make sure that the start time + time to record is less than total length of job';
-
-  rsLabel5='Video Size';
-  rsLabel6='Aspect Ratio';
-  rsLabel7='Audio Bitrate';
-  rsLabel8='Sample Rate';
-  rsLabel4='Frame Rate';
-  rsLabel3='Video Bitrate';
-  rsGroupBox1='Additional Options';
-  rsLabel2='Output Folder';
-  rsLabel1='Convert To ...';
-  rslabel11='Output Folder';
-  rsLabel19='Device Preset';
-  rsLabel20='Volume';
-  rsLabel21='Audio Sync';
-  rsLabel22='Seek to';
-  rsLabel23='Time to Record';
-  rsLabel24='Hours / Minutes / Seconds';
-
-  tabPage1caption='Output Details';
-  tabPage2caption='Video Settings';
-  tabPage3caption='Audio Settings';
-  tabPage4caption='Additional Command Line Parameters (Advanced)';
-  tabPage5caption='Crop';
-
 
   //messages
   rsCouldNotFindPresetFile = 'Could not find presets file.';
@@ -368,8 +282,7 @@ var
   rsNameMustBeAllpha = 'Name Must be alphanumeric (a-z,A-Z,0-9)';
   rsExtensionnoperiod = 'Extension can not contain a period';
   rsFileDoesNotExist = 'file does not exist';
-  rsPresettoExport = 'Please select a preset to export';
-  rsAllCategories = '(All Categories)';
+  rsPresettoExport = 'Please select a preset to ';
   rsSelectDirectory = 'Select Directory';
 
 implementation
@@ -394,85 +307,6 @@ begin
    {$ifdef unix}PODirectory := '/usr/share/winff/languages/'{$endif};
    GetLanguageIDs(Lang, FallbackLang); // in unit gettext
    TranslateUnitResourceStrings('unit1', PODirectory + 'winff.%s.po', Lang, FallbackLang);
-
-    btnAdd.Caption:=rsaddbtn;
-    Label10.Caption:=rslabel10;
-    mitDisplayCmdline.Caption:=rsdisplaycmdline;
-    mitPauseOnFinish.Caption:=rspauseonfinish;
-    mitPlaySoundOnFinish.Caption:=rsplaysoundonfinish;
-    mitShutdownOnFinish.Caption:=rsshutdownonfinish;
-    btnOptions.Caption:=rsoptionsbtn;
-    btnConvert.Caption:=rsstartbtn;
-    btnPlay.Caption:=rsplay;
-    btnPreview.Caption:=rsPreview;
-    btnClear.Caption:=rsclearbtn;
-    btnRemove.Caption:=rsremovebtn;
-    cbxDeinterlace.Caption:=rscheckbox2;
-    cbx2Pass.Caption:=rspass2;
-    mnuEdit.Caption:=rsmenuitem1;
-    mitExit.Caption:=rsmenuitem3;
-    mitPresets.Caption:=rsmenuitem4;
-    mitPreferences.Caption:=rsmenuitem5;
-    mnuHelp.Caption := rsmenuitem6;
-    mitForums.Caption := rsmenuitem7;
-    mitAbout.Caption:= rsmitabout;
-    mitWinff.Caption := rsmitWinff;
-    mitdocs.Caption:= rsmitdocs;
-    mitImportPreset.Caption:=rsimportmenu;
-    mitShowOptions.Caption:=rsshowoptions;
-    mnuOptions.Caption:=rsoptions;
-    mnuFile.Caption:=rsfilemenu;
-    lblVideoSize.Caption:=rslabel5;
-    lblAspectRatio.Caption:=rslabel6;
-    Label7.Caption:=rslabel7;
-    Label8.Caption:=rslabel8;
-    lblFrameRate.Caption:=rslabel4;
-    lblVideoBitRate.Caption:=rslabel3;
-    label11.Caption:=rslabel11;
-    Label19.Caption:=rslabel19;
-    Label20.Caption:=rslabel20;
-    Label21.Caption:=rslabel21;
-    Label22.Caption:=rslabel22;
-    Label23.Caption:=rslabel23;
-    Label24.Caption:=rslabel24;
-
-
-    gbxSettings.Caption:=rsgroupbox1;
-    Label1.Caption:=rslabel1;
-    Label2.Caption:=rslabel2;
-    lblCropLeft.Caption:=rsCropLeft;
-    lblCropRight.Caption:=rsCropRight;
-    lblCropTop.Caption:=rsCropTop;
-    lblCropBottom.Caption:=rsCropBottom;
-    grpOutputSettings.Caption:=tabPage1caption;
-    tabVideoSettings.Caption:=tabPage2caption;
-    tabAudioSettings.Caption:=tabPage3caption;
-    tabCmdLineSettings.Caption:=tabPage4caption;
-    tabPageCrop.Caption:=tabpage5caption;
-    //hints
-    btnAdd.Hint:=rsHintAdd;
-    btnRemove.Hint:=rsHintRemove;
-    btnClear.Hint:=rsHintClear;
-    btnPreview.Hint:=rsHintPreview;
-    btnPlay.Hint:=rsHintPlay;
-    btnOptions.Hint:=rsHintOptions;
-    btnConvert.Hint:=rsHintConvert;
-    categorybox.Hint:=rsHintConvertTo;
-    PresetBox.Hint:=rsHintDevicePreset;
-    DestFolder.Hint:=rsHintOutputfolder;
-    VidBitRate.Hint:=rsHintVideobitrate;
-    Vidframerate.Hint:=rsHintFramerate;
-    VidsizeX.Hint:=rsHintVideoSize;
-    VidsizeY.Hint:=rsHintVideoSize;
-    audbitrate.Hint:=rsHintAudiobitrate;
-    edtAspectRatio.Hint:=rsHintAspectratio;
-    cbx2Pass.Hint:=rsHint2pass;
-    cbxDeinterlace.Hint:=rsHintDeinterlace;
-    audChannels.Hint:=rsHintAudiochannels;
-    audsamplingrate.Hint:=rsHintSampleRate;
-    edtVolume.hint := rsHintVolume;
-    edtAudioSync.hint := rsHintAudioSync;
-
 
                     // start setup
   {$IFDEF WIN32}
@@ -1787,7 +1621,6 @@ begin                                     // get setup
       // if continue pressed, attempt to execute user modified script;
       frmScript.Memo1.Lines:=script;
       frmScript.scriptfilename:= presetspath + batfile;
-      resmod := frmScript.ShowModal;
       if resmod = 1 then     // Continue Clicked;
       begin
 

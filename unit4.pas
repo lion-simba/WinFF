@@ -96,24 +96,6 @@ var
   frmPreferences: TfrmPreferences;
 
 resourcestring
-    rsform4='WinFF Preferences';
-    rsButton1='OK';
-    rsButton2='Cancel';
-    rsCheckBox1='Remember Last Directory Used';
-    rsCheckBox2='Use CHCP for international characters';
-    rsCheckBox3='Multithreading for Dual Core Processors';
-    rsLabel1='Default Destination Directory';
-    rsLabel2='Path to FFmpeg.exe';
-    rsLabel3='Path to FFPlay.exe';
-    rsLabel4='Path to FFmpeg Executable';
-    rsLabel5='Path to FFPlay Executable';
-    rsLabel6='Terminal to run FFmpeg';
-    rsLabel7='Terminal Options';
-    rslabel8='Priority';
-    rsPage1='General';
-    rsPage2='Ms Windows';
-    rsPage3='Linux';
-
     rspriorityhigh='High';
     rsprioritynormal='Normal';
     rspriorityidle='Idle';
@@ -128,23 +110,6 @@ procedure TfrmPreferences.FormCreate(Sender: TObject);
 
 begin
     TranslateUnitResourceStrings('unit4', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-    frmPreferences.Caption:=rsform4;
-    button1.caption:=rsButton1;
-    button2.caption:=rsButton2;
-    checkbox1.caption:=rsCheckBox1;
-    checkbox2.caption:=rsCheckBox2;
-    checkbox3.caption:=rsCheckBox3;
-    label1.caption:=rsLabel1;
-    label2.caption:=rsLabel2;
-    label3.caption:=rsLabel3;
-    label4.caption:=rsLabel4;
-    label5.caption:=rsLabel5;
-    label6.caption:=rsLabel6;
-    label7.caption:=rsLabel7;
-    label8.caption:=rslabel8;
-    page1.caption:=rsPage1;
-    page2.caption:=rsPage2;
-    page3.caption:=rsPage3;
     prioritybox.Items.Add(rspriorityhigh);
     prioritybox.Items.Add(rsprioritynormal);
     prioritybox.Items.Add(rspriorityidle);

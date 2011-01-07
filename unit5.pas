@@ -24,7 +24,7 @@ interface
 
 uses
   Classes, SysUtils, LResources, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ClipBrd,Buttons, gettext, translations, ExtCtrls;
+  ClipBrd,Buttons, gettext, ExtCtrls;
 
 type
 
@@ -54,13 +54,6 @@ type
 var
   frmScript: TfrmScript;
 
-Resourcestring
-  rsform5='FFmpeg Command Line';
-  rsbutton1='OK';
-  rsClip='Clipboard';
-  rsClip2='Close';
-  rsSave='Save';
-  rsContinue='Continue';
 implementation
 
 uses unit1;
@@ -69,14 +62,6 @@ uses unit1;
 
 procedure TfrmScript.FormCreate(Sender: TObject);
 begin
-TranslateUnitResourceStrings('unit5', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-  frmScript.Caption:=rsform5;
-  btnClose.Caption:=rsbutton1;
-  btnClip.Caption:=rsClip;
-  btnSave.Caption:=rsSave;
-  btnRun.Caption:=rsContinue;
-  application.processmessages;
-  btnSave.Left := btnClip.Left + btnClip.Width + 4;
 
 end;
 
@@ -88,11 +73,11 @@ end;
 procedure TfrmScript.btnClipClick(Sender: TObject);
 begin
      Clipboard.AsText:=memo1.text; // can copy just one line, but what if its 2-pass?
-     btnClip.Caption := rsClip2;
+     {
      application.processmessages;
      sleep(500);
-     btnClip.Caption := rsClip;
      application.processmessages;
+     }
 end;
 
 procedure TfrmScript.btnRunClick(Sender: TObject);

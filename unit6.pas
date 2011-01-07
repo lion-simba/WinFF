@@ -25,7 +25,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, dom, xmlwrite, gettext, translations, ExtCtrls;
+  StdCtrls, dom, xmlwrite, gettext, ExtCtrls;
 
 type
 
@@ -51,12 +51,6 @@ type
 var
   frmExport: TfrmExport;
 
-Resourcestring
-    rsform6='Export Presets';
-    rsexportbtn='Export';
-    rscancelbtn='Cancel';
-    rslabel1='Choose presets to export';
-
 implementation
 
 uses unit1;
@@ -68,13 +62,6 @@ var
 i:integer;
 node,subnode: tdomnode;
 begin
-
-   TranslateUnitResourceStrings('unit6', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-
-   frmExport.caption:=rsform6;
-   exportbtn.Caption:=rsexportbtn;
-   cancelbtn.Caption:=rscancelbtn;
-   label1.Caption:=rslabel1;
 
    for i:= 0 to presets.ChildNodes.Count -1  do
    begin

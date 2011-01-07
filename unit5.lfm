@@ -1,7 +1,7 @@
 object frmScript: TfrmScript
-  Left = 442
+  Left = 575
   Height = 381
-  Top = 223
+  Top = 130
   Width = 656
   ActiveControl = Memo1
   Caption = 'FFmpeg Command Line'

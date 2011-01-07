@@ -86,23 +86,8 @@ var
   shown: boolean;
 
 resourcestring
-  //captions
-   rsform2='Edit Presets';
-   rsaddpresetbtn='Add / Update';
-   rsexport='Export';
-   rsimport='Import';
-   rsimportpresets='Import Presets';
-   rsCancelBtn='Cancel';
-   rsOKbtn='Save';
-   rsDeleteBtn='Delete';
-   rsLabel1='Presets';
-   rsLabel2='Preset Name (One word , Only A-z 0-9)';
-   rsLabel3='Preset Label';
-   rsLabel4='Preset Command Line (no -i or output file)';
-   rsLabel5='Output File Extension (no ".")';
-   rsLabel6='Category';
-
   // messages
+  rsimportpresets='Import Presets';
   rsYouMustEnterNmae = 'You must enter a name.';
   rsYouMustEnterLabel = 'You must enter a label.';
   rsYouMustEnterExtension = 'You must enter the extension.';
@@ -122,21 +107,6 @@ procedure TfrmEditPresets.FormShow(Sender: TObject);
 begin
 
    TranslateUnitResourceStrings('unit2', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-
-   frmEditPresets.caption:=rsform2;
-   addpresetbtn.caption:=rsaddpresetbtn;
-   export.caption:=rsexport;
-   import.caption:=rsimport;
-   cancelbtn.caption:=rsCancelBtn;
-   okbtn.caption:=rsOKbtn;
-   deletebtn.caption:=rsDeleteBtn;
-   label1.caption:=rsLabel1;
-   label2.caption:=rsLabel2;
-   label3.caption:=rsLabel3;
-   label4.caption:=rsLabel4;
-   label5.caption:=rsLabel5;
-   label6.caption:=rsLabel6;
-
 
    lbCategory.Clear;
    lbCategory.Items.AddStrings(frmMain.categorybox.Items);

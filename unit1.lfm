@@ -3,7 +3,7 @@ object frmMain: TfrmMain
   Height = 600
   Top = 167
   Width = 800
-  ActiveControl = Panel2
+  ActiveControl = Panel1
   AllowDropFiles = True
   Caption = 'WinFF'
   ClientHeight = 577
@@ -421,6 +421,7 @@ object frmMain: TfrmMain
           AnchorSideTop.Side = asrBottom
           Left = 13
           Height = 27
+          Hint = 'Device or file type the video should be converted to'
           Top = 23
           Width = 766
           Align = alTop
@@ -437,6 +438,7 @@ object frmMain: TfrmMain
           AnchorSideTop.Side = asrBottom
           Left = 13
           Height = 27
+          Hint = 'Specific settings to use for the choosen device or file type'
           Top = 71
           Width = 766
           Align = alTop
@@ -467,6 +469,7 @@ object frmMain: TfrmMain
             AnchorSideRight.Control = ChooseFolderBtn
             Left = 0
             Height = 27
+            Hint = 'Target location for the final video (choose a different folder than the source folder)'
             Top = 0
             Width = 725
             Anchors = [akTop, akLeft, akRight]
@@ -518,6 +521,7 @@ object frmMain: TfrmMain
     object btnAdd: TBitBtn
       Left = 1
       Height = 54
+      Hint = 'Add file(s) to the list for conversion'
       Top = 1
       Width = 60
       Align = alLeft
@@ -608,6 +612,7 @@ object frmMain: TfrmMain
     object btnRemove: TBitBtn
       Left = 61
       Height = 54
+      Hint = 'Remove selected file(s) from the list'
       Top = 1
       Width = 63
       Align = alLeft
@@ -698,6 +703,7 @@ object frmMain: TfrmMain
     object btnClear: TBitBtn
       Left = 124
       Height = 54
+      Hint = 'Remove all files from the list'
       Top = 1
       Width = 60
       Align = alLeft
@@ -788,6 +794,7 @@ object frmMain: TfrmMain
     object btnPlay: TBitBtn
       Left = 184
       Height = 54
+      Hint = 'Preview the selected source file with ffplay (good test to see if conversion is possible)'
       Top = 1
       Width = 60
       Align = alLeft
@@ -878,6 +885,7 @@ object frmMain: TfrmMain
     object btnConvert: TBitBtn
       Left = 306
       Height = 54
+      Hint = 'Start the conversion process'
       Top = 1
       Width = 61
       Align = alLeft
@@ -968,6 +976,7 @@ object frmMain: TfrmMain
     object btnPreview: TBitBtn
       Left = 244
       Height = 54
+      Hint = 'Preview using the output settings'
       Top = 1
       Width = 62
       Align = alLeft
@@ -1058,6 +1067,7 @@ object frmMain: TfrmMain
     object btnOptions: TBitBtn
       Left = 739
       Height = 54
+      Hint = 'Open/close the additional options window'
       Top = 1
       Width = 60
       Align = alRight
@@ -1182,11 +1192,11 @@ object frmMain: TfrmMain
       TabOrder = 0
       object nbkSettings: TNotebook
         Left = 0
-        Height = 141
+        Height = 143
         Top = 0
         Width = 792
         Align = alClient
-        PageIndex = 0
+        PageIndex = 1
         TabOrder = 0
         object tabVideoSettings: TPage
           Caption = 'Video'
@@ -1227,6 +1237,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) the target kilobits/second that the stream should use'
               Top = 24
               Width = 104
               Anchors = [akTop, akLeft, akRight]
@@ -1242,6 +1253,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 19
+              Hint = 'Using two passes allows the encoder to gather information in the first run for enhanced quality'
               Top = 56
               Width = 104
               Anchors = [akTop, akLeft, akRight]
@@ -1287,6 +1299,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<real> or <integer>) number of frames per second'
               Top = 24
               Width = 100
               Anchors = [akTop, akLeft, akRight]
@@ -1301,6 +1314,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 19
+              Hint = 'Removes interlacing from the video (if necessary)'
               Top = 56
               Width = 100
               Anchors = [akTop, akLeft, akRight]
@@ -1364,6 +1378,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer> X <integer>) Amount of pixels in each frame. For codecs that don''''t support pixel aspect ratio (PAR) this is the final frame size.'
               Top = 24
               Width = 40
               AutoSize = False
@@ -1377,6 +1392,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 60
               Height = 27
+              Hint = '(<integer> X <integer>) Amount of pixels in each frame. For codecs that don''''t support pixel aspect ratio (PAR) this is the final frame size.'
               Top = 24
               Width = 40
               Anchors = [akTop, akRight]
@@ -1420,6 +1436,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer:integer> or <real>) the physical aspect ratio (DAR) of the target display'
               Top = 24
               Width = 100
               Anchors = [akTop, akLeft, akRight]
@@ -1482,6 +1499,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) the target kilobits/second that the stream should use'
               Top = 24
               Width = 111
               Anchors = [akTop, akLeft, akRight]
@@ -1496,6 +1514,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) 256 = Current Volume, 128 = Half Volume, 512 = Double Volume'
               Top = 75
               Width = 111
               Anchors = [akTop, akLeft, akRight]
@@ -1554,6 +1573,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) the sampling frequency of the audio in Hertz'
               Top = 24
               Width = 101
               Anchors = [akTop, akLeft, akRight]
@@ -1568,6 +1588,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) From 10 up to audio sampling rate such as 44100, 48000. Allows "stretch"/"squeeze" audio stream.'
               Top = 75
               Width = 101
               Anchors = [akTop, akLeft, akRight]
@@ -1609,6 +1630,7 @@ object frmMain: TfrmMain
               AnchorSideRight.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '(<integer>) number of audio channels'
               Top = 24
               Width = 102
               Anchors = [akTop, akLeft, akRight]
@@ -1930,6 +1952,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '<hh:mm:ss> - Seek to this position before start converting'
               Top = 38
               Width = 39
               BorderSpacing.Top = 10
@@ -1943,6 +1966,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 49
               Height = 27
+              Hint = '<hh:mm:ss> - Seek to this position before start converting'
               Top = 38
               Width = 41
               BorderSpacing.Left = 10
@@ -1959,6 +1983,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 100
               Height = 27
+              Hint = '<hh:mm:ss> - Seek to this position before start converting'
               Top = 38
               Width = 42
               BorderSpacing.Left = 10
@@ -1973,6 +1998,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 0
               Height = 27
+              Hint = '<hh:mm:ss> - Stop after this much of video converted'
               Top = 75
               Width = 39
               BorderSpacing.Top = 10
@@ -1986,6 +2012,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 49
               Height = 27
+              Hint = '<hh:mm:ss> - Stop after this much of video converted'
               Top = 75
               Width = 41
               BorderSpacing.Left = 10
@@ -2001,6 +2028,7 @@ object frmMain: TfrmMain
               AnchorSideTop.Side = asrBottom
               Left = 100
               Height = 27
+              Hint = '<hh:mm:ss> - Stop after this much of video converted'
               Top = 75
               Width = 42
               BorderSpacing.Left = 10

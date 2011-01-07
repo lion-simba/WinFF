@@ -76,30 +76,17 @@ type
 var
   frmAbout: TfrmAbout;
 
-Resourcestring
-    rsButton1='OK';
-    rsPage1='WinFF';
-    rsPage2='FFmpeg';
-    rsPage3='Thanks';
-    rsform3='About WinFF';
-    rslabel8='FFmpeg builds by';
-
 implementation
 
 uses unit1;
 { TfrmAbout }
 
 procedure TfrmAbout.FormCreate(Sender: TObject);
-begin                  // do translations
+begin
+    // do translations
     TranslateUnitResourceStrings('unit3', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-    button1.caption:=rsButton1;
-    page1.caption:=rsPage1;
-    page2.caption:=rsPage2;
-    page3.caption:=rsPage3;
-    frmAbout.caption:=rsform3;
-    label8.caption:=rslabel8;
     
-                     // fill thank you memo
+    // fill thank you memo
 
     listbox1.items.Add('Translators:');
     listbox1.items.Add('Nighto');

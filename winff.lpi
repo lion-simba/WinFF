@@ -12,12 +12,14 @@
       <Title Value="WinFF"/>
     </General>
     <i18n>
+      <EnableI18N Value="True"/>
       <OutDir Value="languages"/>
     </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <CurrentVersionNr Value="1"/>
-      <CurrentMajorRevNr Value="2"/>
+      <CurrentMajorRevNr Value="3"/>
+      <CurrentMinorRevNr Value="2"/>
       <ProjectVersion Value="1.2.0.0"/>
       <Comments Value="WinFF Video Converter"/>
       <CompanyName Value="WinFF.org"/>
