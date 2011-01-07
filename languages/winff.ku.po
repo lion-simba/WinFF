@@ -759,6 +759,7 @@ msgstr "Pela çewt a Pêşmîheng"
 msgid "Name Must be alphanumeric (a-z,A-Z,0-9)"
 msgstr "Navê divê tîp û hejmar bihewîne  (a-z,A-Z,0-9)"
 
+#| msgctxt "unit3.rsbutton1"
 #: unit1.rspleaseadd1file
 msgid "Please add at least 1 file to convert"
 msgstr "Herî kêm 1 pel lê zêdeke û were veguhertin"
@@ -813,7 +814,6 @@ msgstr "Pela vîdyoyê hilbijêre"
 msgid "The preset contains illegal characters"
 msgstr "Di Pêşmîheng de karakterên qedexe heye"
 
-#| msgctxt "unit3.rsbutton1"
 #: unit2.rscreatepreset
 msgid "Create Preset:"
 msgstr "Pêşmîheng biafirîne:"

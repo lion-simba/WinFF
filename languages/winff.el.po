@@ -760,6 +760,7 @@ msgstr "Ακατάλληλο Αρχείο Preset"
 msgid "Name Must be alphanumeric (a-z,A-Z,0-9)"
 msgstr "Το όνομα Πρέπει να είναι αλφαρηθμιτικό(a-z,A-Z,0-9) "
 
+#| msgctxt "unit3.rsbutton1"
 #: unit1.rspleaseadd1file
 msgid "Please add at least 1 file to convert"
 msgstr "Παρακαλώ προσθέστε ένα τουλάχιστον αρχείο για μετατροπή"
@@ -814,7 +815,6 @@ msgstr "Επιλογή Αρχείων Βίντεο"
 msgid "The preset contains illegal characters"
 msgstr "Το Preset εμπεριέχει άκυρους χαρακτήρες"
 
-#| msgctxt "unit3.rsbutton1"
 #: unit2.rscreatepreset
 msgid "Create Preset:"
 msgstr "Δημιμουργία Preset"

@@ -760,6 +760,7 @@ msgstr "Neveljavna datoteka prednastavitev"
 msgid "Name Must be alphanumeric (a-z,A-Z,0-9)"
 msgstr "Ime morajo sestavljati alfanumerični znaki (a-z,A-Z,0-9)"
 
+#| msgctxt "unit3.rsbutton1"
 #: unit1.rspleaseadd1file
 msgid "Please add at least 1 file to convert"
 msgstr "Dodajte najmanj eno datoteko za pretvorbo"
@@ -814,7 +815,6 @@ msgstr "Izberite video datoteke"
 msgid "The preset contains illegal characters"
 msgstr "Prednastavitev vsebuje nedovoljene znake"
 
-#| msgctxt "unit3.rsbutton1"
 #: unit2.rscreatepreset
 msgid "Create Preset:"
 msgstr "Ustvari prednastavitev:"
