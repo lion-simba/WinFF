@@ -1081,7 +1081,7 @@ object frmMain: TfrmMain
       TabOrder = 6
     end
   end
-  object pnlbottom2: TPanel
+  object pnlAdditionalOptions: TPanel
     Left = 0
     Height = 163
     Top = 381

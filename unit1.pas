@@ -97,7 +97,7 @@ type
     cbx2Pass: TCheckBox;
     btnPlay: TBitBtn;
     pnlbottom: TPanel;
-    pnlbottom2: TPanel;
+    pnlAdditionalOptions: TPanel;
     pnlMain: TPanel;
     mitPauseOnFinish: TMenuItem;
     mitPlaySoundOnFinish: TMenuItem;
@@ -622,7 +622,7 @@ begin
   if showopts='true' then
         begin
         mitShowOptions.Checked:=true;
-        pnlBottom2.Visible :=true;
+        pnlAdditionalOptions.Visible :=true;
         frmMain.height := formheight;
         frmMain.width := formwidth;
         frmMain.invalidate;
@@ -630,7 +630,7 @@ begin
   else
         begin
         mitShowOptions.Checked:=false;
-        pnlBottom2.Visible :=false;
+        pnlAdditionalOptions.Visible :=false;
         frmMain.height := formheight;
         frmMain.width := formwidth;
         frmMain.invalidate;
@@ -1255,6 +1255,8 @@ begin
 end;
 
 
+
+
 // menu: edit the presets
 procedure TfrmMain.mitPresetsClick(Sender: TObject);
 begin
@@ -1363,13 +1365,13 @@ procedure TfrmMain.mitShowOptionsClick(Sender: TObject);
 
         if frmMain.height < 400 then frmMain.height := 550;
 
-        pnlBottom2.Visible := True;
+        pnlAdditionalOptions.Visible := True;
         mitShowOptions.Checked:=true;
         end
   else
         begin
 
-        if frmMain.Height - pnlBottom2.Height > 400 then
+        if frmMain.Height - pnlAdditionalOptions.Height > 400 then
           begin
             frmMain.Height:=frmMain.Height-pnlBottom.Height;
           end
@@ -1377,7 +1379,7 @@ procedure TfrmMain.mitShowOptionsClick(Sender: TObject);
           begin
             frmMain.Height := 400;/// Ensure they don't make it too small.
           end;
-        pnlbottom2.visible := false;
+        pnlAdditionalOptions.visible := false;
         mitShowOptions.Checked:=false;
 
         vidbitrate.Clear;
