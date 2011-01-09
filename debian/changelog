@@ -1,3 +1,15 @@
+winff (1.3.1-2uirework1) experimental; urgency=low
+
+  * UI controls are now sizeable to fit translation text
+    of any (reasonable) length
+  * "Seek to" and "Record Time" controls on "Additional Options" panel
+    moved to new "Time" tab
+  * Translation system is changed to Lazarus integrated i18n
+  * Russian translation updated
+  * AUTHORS file added
+
+ -- Alexey Osipov <lion-simba@pridelands.ru>  Sun, 09 Jan 2011 17:58:33 +0600
+
 winff (1.3.1-1) experimental; urgency=low
 
   * New upstream release
