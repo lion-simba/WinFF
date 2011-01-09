@@ -138,70 +138,70 @@ begin
     prioritybox.Items.Add(rsprioritynormal);
     prioritybox.Items.Add(rspriorityidle);
   {$ifdef win32}
-   edit2.Text:= form1.getconfigvalue('win32/ffmpeg');
-   edit3.Text:= form1.getconfigvalue('win32/ffplay');
-   if form1.getconfigvalue('win32/chcp') = 'true' then
+   edit2.Text:= frmMain.getconfigvalue('win32/ffmpeg');
+   edit3.Text:= frmMain.getconfigvalue('win32/ffplay');
+   if frmMain.getconfigvalue('win32/chcp') = 'true' then
      checkbox2.Checked := true
   else
      checkbox2.Checked := false;
   {$endif}
   {$ifdef unix}
 
-   edit4.Text:= form1.getconfigvalue('unix/ffmpeg');
-   edit5.Text:= form1.getconfigvalue('unix/ffplay');
-   edit6.Text:= form1.getconfigvalue('unix/terminal');
-   edit7.Text:= form1.getconfigvalue('unix/termoptions');
+   edit4.Text:= frmMain.getconfigvalue('unix/ffmpeg');
+   edit5.Text:= frmMain.getconfigvalue('unix/ffplay');
+   edit6.Text:= frmMain.getconfigvalue('unix/terminal');
+   edit7.Text:= frmMain.getconfigvalue('unix/termoptions');
   {$endif}
 
-  edit1.Text:= form1.getconfigvalue('general/destfolder');
+  edit1.Text:= frmMain.getconfigvalue('general/destfolder');
 
 
-  if form1.getconfigvalue('general/rememberlast') = 'true' then
+  if frmMain.getconfigvalue('general/rememberlast') = 'true' then
      checkbox1.Checked := true
   else
      checkbox1.Checked := false;
 
-  if form1.getconfigvalue('general/multithreading') = 'true' then
+  if frmMain.getconfigvalue('general/multithreading') = 'true' then
      checkbox3.Checked := true
   else
      checkbox3.Checked := false;
-  edtthreads.Text:= form1.getconfigvalue('general/numberofthreads');
+  edtthreads.Text:= frmMain.getconfigvalue('general/numberofthreads');
 
-  prioritybox.Text := form1.getconfigvalue('general/priority');
+  prioritybox.Text := frmMain.getconfigvalue('general/priority');
 end;
 
 // save preference
 procedure TForm4.Button1Click(Sender: TObject);
 
 begin
-  form1.setconfigvalue('general/destfolder',edit1.text);
-  form1.DestFolder.Text := edit1.text;
+  frmMain.setconfigvalue('general/destfolder',edit1.text);
+  frmMain.DestFolder.Text := edit1.text;
   
   if checkbox1.Checked then
    begin
-    form1.setconfigvalue('general/rememberlast','true');
+    frmMain.setconfigvalue('general/rememberlast','true');
     unit1.rememberlast:='true';
    end
   else
    begin
-    form1.setconfigvalue('general/rememberlast','false');
+    frmMain.setconfigvalue('general/rememberlast','false');
     unit1.rememberlast:='false';
    end;
 
   if checkbox3.Checked then
    begin
-    form1.setconfigvalue('general/multithreading','true');
+    frmMain.setconfigvalue('general/multithreading','true');
     unit1.multithreading:='true';
    end
   else
    begin
-    form1.setconfigvalue('general/multithreading','false');
+    frmMain.setconfigvalue('general/multithreading','false');
     unit1.multithreading:='false';
    end;
   edtthreads.Text:=trim(edtthreads.Text);
-  form1.setconfigvalue('general/numberofthreads', edtthreads.Text);
+  frmMain.setconfigvalue('general/numberofthreads', edtthreads.Text);
 
-  form1.setconfigvalue('general/priority', prioritybox.Text);
+  frmMain.setconfigvalue('general/priority', prioritybox.Text);
 
   edit1.Text := trim(edit1.Text);
   edit2.Text := trim(edit2.Text);
@@ -219,17 +219,17 @@ begin
 
   unit1.ffmpeg := edit2.text;
   unit1.ffplay := edit3.text;
-  form1.setconfigvalue('win32/ffmpeg',edit2.text);
-  form1.setconfigvalue('win32/ffplay',edit3.text);
+  frmMain.setconfigvalue('win32/ffmpeg',edit2.text);
+  frmMain.setconfigvalue('win32/ffplay',edit3.text);
   
   if checkbox2.Checked then
    begin
-    form1.setconfigvalue('win32/chcp','true');
+    frmMain.setconfigvalue('win32/chcp','true');
     unit1.usechcp:='true';
    end
   else
    begin
-    form1.setconfigvalue('win32/chcp','false');
+    frmMain.setconfigvalue('win32/chcp','false');
     unit1.usechcp:='false';
    end;
   {$endif}
@@ -246,10 +246,10 @@ begin
   unit1.ffplay := edit5.text;
   unit1.terminal :=edit6.text;
   unit1.termoptions := edit7.text;
-  form1.setconfigvalue('unix/ffmpeg',edit4.text);
-  form1.setconfigvalue('unix/ffplay',edit5.text);
-  form1.setconfigvalue('unix/terminal',edit6.text);
-  form1.setconfigvalue('unix/termoptions',edit7.text);
+  frmMain.setconfigvalue('unix/ffmpeg',edit4.text);
+  frmMain.setconfigvalue('unix/ffplay',edit5.text);
+  frmMain.setconfigvalue('unix/terminal',edit6.text);
+  frmMain.setconfigvalue('unix/termoptions',edit7.text);
   {$endif}
   
 

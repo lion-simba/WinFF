@@ -31,22 +31,9 @@ uses
 
 type
 
-  { TForm1 }
+  { TfrmMain }
 
-  TForm1 = class(TForm)
-    btnAdd: TBitBtn;
-    btnPreview: TBitBtn;
-    edtVolume: TEdit;
-    edtAudioSync: TEdit;
-  {  edtTTRHH: TMaskEdit;
-    edtSeekMM: TMaskEdit;
-    edtTTRMM: TMaskEdit;
-    edtSeekSS: TMaskEdit;
-    edtTTRSS: TMaskEdit;
-  }  //edtVolume: TEdit;
-    //edtVolume1: TEdit;
-    edtCropLeft: TEdit;
-    edtAspectRatio: TEdit;
+  TfrmMain = class(TForm)
     audbitrate: TEdit;
     audchannels: TEdit;
     audsamplingrate: TEdit;
@@ -225,7 +212,7 @@ const
 {$ENDIF}
 
 var
-  Form1: TForm1; 
+  frmMain: TfrmMain;
   {$IFDEF WIN32}
   PIDL : PItemIDList;
   ansicodepage: longint;
@@ -367,7 +354,7 @@ implementation
 
 
 // Initialize everything
-procedure tform1.FormCreate(Sender: TObject);
+procedure TfrmMain.FormCreate(Sender: TObject);
 var
 f1,f2:textfile;
 ch: char;
@@ -579,7 +566,7 @@ begin
   if not fileexists(presetspath + 'presets.xml') then
      begin
      showmessage(rsCouldNotFindPresetFile);
-     form1.close;
+     frmMain.close;
      end;
 
   presetsfile.Create;                         // load the presets file
@@ -588,7 +575,7 @@ begin
    presets:=presetsfile.DocumentElement;
   except
    showmessage(rsCouldNotFindPresetFile);
-   form1.close;
+   frmMain.close;
   end;
                                       // import preset from command line
   if upcase(rightstr(paramstr(1),4)) = '.WFF' then
@@ -617,11 +604,11 @@ begin
 
   formtop := 0;
   if sformtop <> '' then formtop:=strtoint(sformtop);
-  if formtop > 0 then form1.Top := formtop;
+  if formtop > 0 then frmMain.Top := formtop;
 
   formleft := 0;
   if sformleft <> '' then formleft:=strtoint(sformleft);
-  if formleft >0 then form1.Left := formleft;
+  if formleft >0 then frmMain.Left := formleft;
 
   if sformheight = '' then formheight:=400
   else formheight := strtoint(sformheight);
@@ -636,17 +623,17 @@ begin
         begin
         mitShowOptions.Checked:=true;
         pnlBottom2.Visible :=true;
-        form1.height := formheight;
-        form1.width := formwidth;
-        form1.invalidate;
+        frmMain.height := formheight;
+        frmMain.width := formwidth;
+        frmMain.invalidate;
         end
   else
         begin
         mitShowOptions.Checked:=false;
         pnlBottom2.Visible :=false;
-        form1.height := formheight;
-        form1.width := formwidth;
-        form1.invalidate;
+        frmMain.height := formheight;
+        frmMain.width := formwidth;
+        frmMain.invalidate;
         end;
 
 
@@ -693,7 +680,7 @@ end;
 
 
 // clean up and shut down
-procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+procedure TfrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 var
 s:string;
 begin
@@ -726,17 +713,17 @@ begin
      setconfigvalue('general/pass2','false');
 
      // save window position and size
-  setconfigvalue('window/height',inttostr(form1.height));
-  setconfigvalue('window/width',inttostr(form1.width));
-  setconfigvalue('window/top',inttostr(form1.Top));
-  setconfigvalue('window/left',inttostr(form1.Left));
+  setconfigvalue('window/height',inttostr(frmMain.height));
+  setconfigvalue('window/width',inttostr(frmMain.width));
+  setconfigvalue('window/top',inttostr(frmMain.Top));
+  setconfigvalue('window/left',inttostr(frmMain.Left));
 
   presetsfile.Free;           // cleanup
 
 end;
 
 // get the params from the preset
-function tform1.getpresetparams(presetname:string):string;
+function TfrmMain.getpresetparams(presetname:string):string;
 var
 paramnode : tdomnode;
 param:string;
@@ -754,7 +741,7 @@ begin
 end;
 
 // get the category from the preset
-function tform1.getpresetcategory(presetname:string):string;
+function TfrmMain.getpresetcategory(presetname:string):string;
 var
 catnode : tdomnode;
 category:string;
@@ -776,14 +763,14 @@ begin
 end;
 
 // get the extension of the preset
-function tform1.getpresetextension(presetname:string):string;
+function TfrmMain.getpresetextension(presetname:string):string;
 begin
    result:=presets.FindNode(presetname).FindNode('extension').FindNode('#text').NodeValue;
 end;
 
 
 // get the name of the selected preset
-function tform1.getcurrentpresetname(currentpreset:string):string;
+function TfrmMain.getcurrentpresetname(currentpreset:string):string;
 var
 i:integer;
 node,subnode: tdomnode;
@@ -799,7 +786,7 @@ end;
 
 
 // clear and load the preset box with current list
-procedure tform1.populatepresetbox(selectedcategory:string);
+procedure TfrmMain.populatepresetbox(selectedcategory:string);
 var
 i,j:integer;
 ispresent: boolean;
@@ -871,7 +858,7 @@ begin
 end;
 
 // change category
-procedure TForm1.categoryboxChange(Sender: TObject);
+procedure TfrmMain.categoryboxChange(Sender: TObject);
 var
 i:integer;
 node,subnode, catnode,catsubnode : tdomnode;
@@ -914,7 +901,7 @@ begin
 end;
 
 // cropbootom change
-procedure TForm1.edtCropBottomChange(Sender: TObject);
+procedure TfrmMain.edtCropBottomChange(Sender: TObject);
 var
 i:integer;
 begin
@@ -927,7 +914,7 @@ begin
 end;
 
 // cropleft change
-procedure TForm1.edtCropLeftChange(Sender: TObject);
+procedure TfrmMain.edtCropLeftChange(Sender: TObject);
 var
 i:integer;
 begin
@@ -940,7 +927,7 @@ begin
 end;
 
 // cropright change
-procedure TForm1.edtCropRightChange(Sender: TObject);
+procedure TfrmMain.edtCropRightChange(Sender: TObject);
 var
 i:integer;
 begin
@@ -953,7 +940,7 @@ begin
 end;
 
 // croptop change
-procedure TForm1.edtCropTopChange(Sender: TObject);
+procedure TfrmMain.edtCropTopChange(Sender: TObject);
 var
 i:integer;
 begin
@@ -965,22 +952,22 @@ begin
  i:=i;
 end;
 
-procedure TForm1.edtSeekMMChange(Sender: TObject);
+procedure TfrmMain.edtSeekMMChange(Sender: TObject);
 begin
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TfrmMain.Button1Click(Sender: TObject);
 begin
 end;
 // preview button clicked
-procedure TForm1.btnPreviewClick(Sender: TObject);
+procedure TfrmMain.btnPreviewClick(Sender: TObject);
 begin
 preview := true;
 btnConvertClick(Self);
 end;
 
 // change preset
-procedure TForm1.PresetBoxChange(Sender: TObject);
+procedure TfrmMain.PresetBoxChange(Sender: TObject);
 var
 destdir: string;
 currentpreset:string;
@@ -995,7 +982,7 @@ end;
 
 
 // launch browser
-procedure TForm1.launchbrowser(URL:string);
+procedure TfrmMain.launchbrowser(URL:string);
 {$IFDEF linux}
 var
 launcher:tprocess;
@@ -1026,7 +1013,7 @@ begin
 end;
 
 // launch pdf
-procedure TForm1.LaunchPdf(pdffile:string);
+procedure TfrmMain.LaunchPdf(pdffile:string);
 {$IFDEF linux}
 var
 launcher:tprocess;
@@ -1057,7 +1044,7 @@ begin
 end;
 
 // set a value in the config file
-procedure TForm1.setconfigvalue(key:string;value:string);
+procedure TfrmMain.setconfigvalue(key:string;value:string);
 var
 cfg: TXMLConfig;
 begin
@@ -1067,7 +1054,7 @@ begin
 end;
 
 // get a value from the config file
-function TForm1.getconfigvalue(key:string): string;
+function TfrmMain.getconfigvalue(key:string): string;
 var
 cfg: TXMLConfig;
 begin
@@ -1077,13 +1064,13 @@ begin
 end;
 
 // get the user's desktop path
-function tform1.GetDeskTopPath() : string ;
+function TfrmMain.GetDeskTopPath() : string ;
 {$ifdef win32}
 var
   ppidl: PItemIdList;
 begin
   ppidl := nil;
-  SHGetSpecialFolderLocation(Form1.Handle,CSIDL_DESKTOPDIRECTORY , ppidl);
+  SHGetSpecialFolderLocation(frmMain.Handle,CSIDL_DESKTOPDIRECTORY , ppidl);
   SetLength(Result, MAX_PATH);
    if not SHGetPathFromIDList(ppidl, PChar(Result)) then
         raise exception.create('SHGetPathFromIDList failed : invalid pidl');
@@ -1097,13 +1084,13 @@ end;
 {$endif}
 
 // get the user's document's path
-function tform1.GetMydocumentsPath() : string ;
+function TfrmMain.GetMydocumentsPath() : string ;
 {$ifdef win32}
 var
   ppidl: PItemIdList;
 begin
   ppidl := nil;
-  SHGetSpecialFolderLocation(Form1.Handle,CSIDL_PERSONAL , ppidl);
+  SHGetSpecialFolderLocation(frmMain.Handle,CSIDL_PERSONAL , ppidl);
   SetLength(Result, MAX_PATH);
    if not SHGetPathFromIDList(ppidl, PChar(Result)) then
         raise exception.create('SHGetPathFromIDList failed : invalid pidl');
@@ -1117,13 +1104,13 @@ end;
 {$endif}
 
 // get the user's application data path
-function tform1.GetappdataPath() : string ;
+function TfrmMain.GetappdataPath() : string ;
 {$ifdef win32}
 var
   ppidl: PItemIdList;
 begin
   ppidl := nil;
-  SHGetSpecialFolderLocation(Form1.Handle,CSIDL_APPDATA , ppidl);
+  SHGetSpecialFolderLocation(frmMain.Handle,CSIDL_APPDATA , ppidl);
   SetLength(Result, MAX_PATH);
    if not SHGetPathFromIDList(ppidl, PChar(Result)) then
         raise exception.create('SHGetPathFromIDList failed : invalid pidl');
@@ -1138,7 +1125,7 @@ end;
 
 // get windows version
 {$ifdef win32}
-function tform1.GetWIn32System(): Integer;
+function TfrmMain.GetWIn32System(): Integer;
 var
   osVerInfo: TOSVersionInfo;
   majorVer, minorVer: Integer;
@@ -1188,7 +1175,7 @@ end;
 {$endif}
 
 // choose a folder
-procedure TForm1.ChooseFolderBtnClick(Sender: TObject);
+procedure TfrmMain.ChooseFolderBtnClick(Sender: TObject);
 begin
   selectdirectorydialog1.Title:= rsSelectDirectory;
   if SelectDirectoryDialog1.execute then
@@ -1197,7 +1184,7 @@ end;
 
 
 // drop files into list
-procedure TForm1.FormDropFiles(Sender: TObject; const FileNames: array of String
+procedure TfrmMain.FormDropFiles(Sender: TObject; const FileNames: array of String
   );
 var
 numfiles, i:integer;
@@ -1208,7 +1195,7 @@ for i:= 0 to numfiles do
 end;
 
 // add files to the list
-procedure tform1.btnAddClick(Sender: TObject);
+procedure TfrmMain.btnAddClick(Sender: TObject);
 begin
    dlgOpenFile.Title:=rsSelectVideoFiles;
    dlgOpenFile.InitialDir := getconfigvalue('general/addfilesfolder');
@@ -1220,7 +1207,7 @@ begin
 end;
 
 // remove a file from the list
-procedure tform1.btnRemoveClick(Sender: TObject);
+procedure TfrmMain.btnRemoveClick(Sender: TObject);
 var
 i: integer;
 begin
@@ -1233,23 +1220,23 @@ begin
 end;
 
 // clear the file list
-procedure tform1.btnClearClick(Sender: TObject);
+procedure TfrmMain.btnClearClick(Sender: TObject);
 begin
   filelist.Clear;
 end;
 
-procedure TForm1.lblCropRight1Click(Sender: TObject);
+procedure TfrmMain.lblCropRight1Click(Sender: TObject);
 begin
 
 end;
 
-procedure TForm1.edtSeekHHChange(Sender: TObject);
+procedure TfrmMain.edtSeekHHChange(Sender: TObject);
 begin
 
 end;
 
 // filelist on key up
-procedure TForm1.filelistKeyUp(Sender: TObject; var Key: Word;
+procedure TfrmMain.filelistKeyUp(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 var
 i:integer;
@@ -1269,19 +1256,19 @@ end;
 
 
 // menu: edit the presets
-procedure TForm1.mitPresetsClick(Sender: TObject);
+procedure TfrmMain.mitPresetsClick(Sender: TObject);
 begin
   form2.show;
 end;
 
 // menu: edit preferences
-procedure TForm1.mitPreferencesClick(Sender: TObject);
+procedure TfrmMain.mitPreferencesClick(Sender: TObject);
 begin
 form4.show;
 end;
 
 //menu: help documentation
-procedure TForm1.mitDocsClick(Sender: TObject);
+procedure TfrmMain.mitDocsClick(Sender: TObject);
 var s : string;
 language: string;
 begin
@@ -1312,32 +1299,32 @@ begin
 end;
 
 //menu: Help Forums
-procedure TForm1.mitForumsClick(Sender: TObject);
+procedure TfrmMain.mitForumsClick(Sender: TObject);
 
 begin
   launchbrowser('http://www.winff.org/forums/');
 end;
 
 //menu: Help Forums
-procedure TForm1.mitWinffClick(Sender: TObject);
+procedure TfrmMain.mitWinffClick(Sender: TObject);
 
 begin
   launchbrowser('http://www.winff.org/');
 end;
 
 // menu: about
-procedure TForm1.MenuItem2Click(Sender: TObject);
+procedure TfrmMain.MenuItem2Click(Sender: TObject);
 begin
   form3.show;
 end;
 
 // menu: exit the program
-procedure TForm1.mitExitClick(Sender: TObject);
+procedure TfrmMain.mitExitClick(Sender: TObject);
 begin
-  form1.close;
+  frmMain.close;
 end;
 
-procedure TForm1.mitPlaySoundonFinishClick(Sender: TObject);
+procedure TfrmMain.mitPlaySoundonFinishClick(Sender: TObject);
 begin
   if mitplaysoundOnFinish.Checked then
     begin
@@ -1352,7 +1339,7 @@ begin
 end;
 
 // menu: import preset
-procedure TForm1.mitImportPresetClick(Sender: TObject);
+procedure TfrmMain.mitImportPresetClick(Sender: TObject);
 begin
   dlgOpenPreset.Title:=rsSelectPresetFile;
   dlgOpenPreset.InitialDir:=GetMydocumentsPath();
@@ -1362,19 +1349,19 @@ begin
 end;
 
 // menu: about
-procedure TForm1.mitAboutClick(Sender: TObject);
+procedure TfrmMain.mitAboutClick(Sender: TObject);
 begin
   form3.Show;
 end;
 
 // menu: show / hide additional mnuOptions
-procedure TForm1.mitShowOptionsClick(Sender: TObject);
+procedure TfrmMain.mitShowOptionsClick(Sender: TObject);
  begin
    if not mitShowOptions.Checked then
         begin
-        form1.Height:=form1.Height + pnlBottom.Height ; // This should be fine, not sure if you want to limit height
+        frmMain.Height:=frmMain.Height + pnlBottom.Height ; // This should be fine, not sure if you want to limit height
 
-        if form1.height < 400 then form1.height := 550;
+        if frmMain.height < 400 then frmMain.height := 550;
 
         pnlBottom2.Visible := True;
         mitShowOptions.Checked:=true;
@@ -1382,13 +1369,13 @@ procedure TForm1.mitShowOptionsClick(Sender: TObject);
   else
         begin
 
-        if form1.Height - pnlBottom2.Height > 400 then
+        if frmMain.Height - pnlBottom2.Height > 400 then
           begin
-            form1.Height:=form1.Height-pnlBottom.Height;
+            frmMain.Height:=frmMain.Height-pnlBottom.Height;
           end
         else
           begin
-            form1.Height := 400;/// Ensure they don't make it too small.
+            frmMain.Height := 400;/// Ensure they don't make it too small.
           end;
         pnlbottom2.visible := false;
         mitShowOptions.Checked:=false;
@@ -1407,7 +1394,7 @@ procedure TForm1.mitShowOptionsClick(Sender: TObject);
 end;
 
 // menu: shutdown on finish
-procedure TForm1.mitShutdownOnFinishClick(Sender: TObject);
+procedure TfrmMain.mitShutdownOnFinishClick(Sender: TObject);
 begin
    if mitShutdownOnFinish.Checked then
     begin
@@ -1422,7 +1409,7 @@ begin
 end;
 
 // menu: pause on finish
-procedure TForm1.mitPauseOnFinishClick(Sender: TObject);
+procedure TfrmMain.mitPauseOnFinishClick(Sender: TObject);
 begin
   if mitPauseOnFinish.Checked then
     begin
@@ -1438,13 +1425,13 @@ begin
 end;
 
 // menu: display commandline
-procedure TForm1.mitDisplayCmdlineClick(Sender: TObject);
+procedure TfrmMain.mitDisplayCmdlineClick(Sender: TObject);
 begin
      mitDisplayCmdline.Checked:= not mitDisplayCmdline.Checked;
 end;
 
 // btnPlay the selected file
-procedure TForm1.btnPlayClick(Sender: TObject);
+procedure TfrmMain.btnPlayClick(Sender: TObject);
 var
 i : integer;
 filenametoplay: string;
@@ -1481,7 +1468,7 @@ begin
 end;
 
 // Start Conversions
-procedure TForm1.btnConvertClick(Sender: TObject);
+procedure TfrmMain.btnConvertClick(Sender: TObject);
 var
 i,j : integer;
 cb,ct,cl,cr:integer;
@@ -1812,7 +1799,7 @@ begin                                     // get setup
 end;
 
    // replace a paramter from a commandline
-function Tform1.replaceparam(commandline:string; param:string; replacement:string):string;
+function TfrmMain.replaceparam(commandline:string; param:string; replacement:string):string;
 var
 i,startpos,endpos: integer;
 
@@ -1835,13 +1822,13 @@ begin
      result:=commandline;
 end;
 
-procedure TForm1.VidbitrateChange(Sender: TObject);
+procedure TfrmMain.VidbitrateChange(Sender: TObject);
 begin
 
 end;
 
 // import a preset from a file
-procedure tform1.importpresetfromfile(presetfilename: string);
+procedure TfrmMain.importpresetfromfile(presetfilename: string);
 var
  importfile: txmldocument;
  importedpreset: tdomelement;

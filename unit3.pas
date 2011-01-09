@@ -136,17 +136,17 @@ end;
 
 procedure TForm3.Label10Click(Sender: TObject);
 begin
-  form1.LaunchBrowser('http://ffmpeg.arrozcru.org/');
+  frmMain.LaunchBrowser('http://ffmpeg.arrozcru.org/');
 end;
 
 procedure TForm3.Label12Click(Sender: TObject);
 begin
-form1.LaunchBrowser('http://istoff.blogspot.com');
+frmMain.LaunchBrowser('http://istoff.blogspot.com');
 end;
 
 procedure TForm3.Label13Click(Sender: TObject);
 begin
-  form1.LaunchBrowser('http://www.bandshed.net/');
+  frmMain.LaunchBrowser('http://www.bandshed.net/');
 end;
 
 
@@ -162,12 +162,12 @@ end;
 
 procedure TForm3.Label3Click(Sender: TObject);
 begin
-   form1.LaunchBrowser('http://www.biggmatt.com');
+   frmMain.LaunchBrowser('http://www.biggmatt.com');
 end;
 
 procedure TForm3.Label4Click(Sender: TObject);
 begin
-  form1.LaunchBrowser('http://www.winff.org');
+  frmMain.LaunchBrowser('http://www.winff.org');
 end;
 
 procedure TForm3.Label5Click(Sender: TObject);
@@ -176,7 +176,7 @@ end;
 
 procedure TForm3.Label7Click(Sender: TObject);
 begin
-  form1.LaunchBrowser('http://ffmpeg.org/');
+  frmMain.LaunchBrowser('http://ffmpeg.org/');
 end;
 
 

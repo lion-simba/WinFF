@@ -135,7 +135,7 @@ begin
 
 
    lbCategory.Clear;
-   lbCategory.Items.AddStrings(form1.categorybox.Items);
+   lbCategory.Items.AddStrings(frmMain.categorybox.Items);
 
 end;
 
@@ -464,14 +464,14 @@ end;
 procedure TForm2.OKbtnClick(Sender: TObject);
 begin
   writexmlfile(presetsfile, presetspath + 'presets.xml');
-  form1.populatepresetbox('');
+  frmMain.populatepresetbox('');
   form2.close;
 end;
 
 // just exit
 procedure TForm2.CancelBtnClick(Sender: TObject);
 begin
-  form1.populatepresetbox('');
+  frmMain.populatepresetbox('');
   form2.close;
 end;
 
