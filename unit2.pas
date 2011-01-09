@@ -51,8 +51,11 @@ type
     ListBox1: TListBox;
     OKbtn: TButton;
     OpenDialog1: TOpenDialog;
-    Panel1: TPanel;
-    Panel2: TPanel;
+    pnlRight2: TPanel;
+    pnlRight1: TPanel;
+    pnlLeft: TPanel;
+    pnlSettings: TPanel;
+    pnlTop: TPanel;
     pnlBottom: TPanel;
     SaveDialog1: TSaveDialog;
     Splitter1: TSplitter;
