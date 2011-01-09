@@ -28,9 +28,9 @@ uses
 
 type
 
-  { TForm2 }
+  { TfrmEditPresets }
 
-  TForm2 = class(TForm)
+  TfrmEditPresets = class(TForm)
     addpresetbtn: TButton;
     CancelBtn: TButton;
     DeleteBtn: TButton;
@@ -77,7 +77,7 @@ type
   end; 
 
 var
-  Form2: TForm2; 
+  frmEditPresets: TfrmEditPresets;
   pn:string;
   shown: boolean;
 
@@ -111,15 +111,15 @@ implementation
 
 uses unit1,unit6;
 
-{ TForm2 }
+{ TfrmEditPresets }
 
 // get setup
-procedure TForm2.FormShow(Sender: TObject);
+procedure TfrmEditPresets.FormShow(Sender: TObject);
 begin
 
    TranslateUnitResourceStrings('unit2', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
 
-   form2.caption:=rsform2;
+   frmEditPresets.caption:=rsform2;
    addpresetbtn.caption:=rsaddpresetbtn;
    export.caption:=rsexport;
    import.caption:=rsimport;
@@ -142,7 +142,7 @@ end;
 
 
 // Get the selected preset's information
-procedure TForm2.ListBox1Click(Sender: TObject);
+procedure TfrmEditPresets.ListBox1Click(Sender: TObject);
 var
 i:integer;
 selectedtext :string;
@@ -176,7 +176,7 @@ begin
 end;
 
 // add / update a preset
-procedure TForm2.addpresetbtnClick(Sender: TObject);
+procedure TfrmEditPresets.addpresetbtnClick(Sender: TObject);
 var
 labeltext: string;
 i:integer;
@@ -261,7 +261,7 @@ begin
 end;
 
 // delete a preset
-procedure TForm2.DeleteBtnClick(Sender: TObject);
+procedure TfrmEditPresets.DeleteBtnClick(Sender: TObject);
 var
 labeltext :string;
 node2delete: tdomnode;
@@ -283,7 +283,7 @@ end;
 
 
 // import a preset
-procedure TForm2.importClick(Sender: TObject);
+procedure TfrmEditPresets.importClick(Sender: TObject);
 var
  importfile: txmldocument;
  importedpreset: tdomelement;
@@ -421,12 +421,12 @@ begin
 
 end;
 
-procedure TForm2.lbCategoryClick(Sender: TObject);
+procedure TfrmEditPresets.lbCategoryClick(Sender: TObject);
 begin
   RefreshPresetsBox;
 end;
 
-procedure TForm2.RefreshPresetsBox;
+procedure TfrmEditPresets.RefreshPresetsBox;
 var i : integer;
     cat, pre, ocat : string;
     node, subnode : tdomnode;
@@ -453,7 +453,7 @@ begin
    end;
 end;
 
-procedure TForm2.exportClick(Sender: TObject);
+procedure TfrmEditPresets.exportClick(Sender: TObject);
 
 begin
 unit6.form6.show;
@@ -461,21 +461,21 @@ end;
 
 
 // save & exit
-procedure TForm2.OKbtnClick(Sender: TObject);
+procedure TfrmEditPresets.OKbtnClick(Sender: TObject);
 begin
   writexmlfile(presetsfile, presetspath + 'presets.xml');
   frmMain.populatepresetbox('');
-  form2.close;
+  frmEditPresets.close;
 end;
 
 // just exit
-procedure TForm2.CancelBtnClick(Sender: TObject);
+procedure TfrmEditPresets.CancelBtnClick(Sender: TObject);
 begin
   frmMain.populatepresetbox('');
-  form2.close;
+  frmEditPresets.close;
 end;
 
-procedure TForm2.ValidateFields(var IsOkay: Boolean);
+procedure TfrmEditPresets.ValidateFields(var IsOkay: Boolean);
 var i : integer;
     s : string;
 begin

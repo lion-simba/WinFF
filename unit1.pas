@@ -1258,7 +1258,7 @@ end;
 // menu: edit the presets
 procedure TfrmMain.mitPresetsClick(Sender: TObject);
 begin
-  form2.show;
+  frmEditPresets.show;
 end;
 
 // menu: edit preferences
