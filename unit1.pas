@@ -1382,25 +1382,18 @@ procedure TfrmMain.mitShowOptionsClick(Sender: TObject);
  begin
    if not mitShowOptions.Checked then
         begin
-        frmMain.Height:=frmMain.Height + pnlBottom.Height ; // This should be fine, not sure if you want to limit height
-
-        if frmMain.height < 400 then frmMain.height := 550;
-
+        frmMain.Height := frmMain.Height + pnlAdditionalOptions.Height;
         pnlAdditionalOptions.Visible := True;
+        //Constraints.MinHeight := Constraints.MinHeight + pnlAdditionalOptions.Height;
+
         mitShowOptions.Checked:=true;
         end
   else
         begin
-
-        if frmMain.Height - pnlAdditionalOptions.Height > 400 then
-          begin
-            frmMain.Height:=frmMain.Height-pnlBottom.Height;
-          end
-        else
-          begin
-            frmMain.Height := 400;/// Ensure they don't make it too small.
-          end;
+        //Constraints.MinHeight := Constraints.MinHeight - pnlAdditionalOptions.Height;
         pnlAdditionalOptions.visible := false;
+        frmMain.Height := frmMain.Height - pnlAdditionalOptions.Height;
+
         mitShowOptions.Checked:=false;
 
         vidbitrate.Clear;
@@ -1413,7 +1406,9 @@ procedure TfrmMain.mitShowOptionsClick(Sender: TObject);
         mitDisplayCmdline.Checked:=false;
         commandlineparams.Clear;
         end;
-  Application.ProcessMessages; // Should repaint the form like invalidate
+
+  //  Application.ProcessMessages; // Should repaint the form like invalidate
+  Invalidate; //Why not use Invalidate itself?
 end;
 
 // menu: shutdown on finish
