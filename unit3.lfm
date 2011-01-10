@@ -1,4 +1,4 @@
-object Form3: TForm3
+object frmAbout: TfrmAbout
   Left = 499
   Height = 299
   Top = 286

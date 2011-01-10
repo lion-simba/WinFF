@@ -1315,7 +1315,7 @@ end;
 // menu: about
 procedure TfrmMain.MenuItem2Click(Sender: TObject);
 begin
-  form3.show;
+  frmAbout.show;
 end;
 
 // menu: exit the program
@@ -1351,7 +1351,7 @@ end;
 // menu: about
 procedure TfrmMain.mitAboutClick(Sender: TObject);
 begin
-  form3.Show;
+  frmAbout.Show;
 end;
 
 // menu: show / hide additional mnuOptions
