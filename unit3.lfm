@@ -4,6 +4,8 @@ object frmAbout: TfrmAbout
   Top = 286
   Width = 373
   ActiveControl = Notebook1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'About WinFF'
   ClientHeight = 299
   ClientWidth = 373
