@@ -1,12 +1,12 @@
 object frmMain: TfrmMain
-  Left = 286
-  Height = 630
-  Top = 162
+  Left = 301
+  Height = 670
+  Top = 176
   Width = 777
   ActiveControl = nbkSettings
   AllowDropFiles = True
   Caption = 'WinFF'
-  ClientHeight = 607
+  ClientHeight = 647
   ClientWidth = 777
   Icon.Data = {
     BE2500000000010001003030000001002000A825000016000000280000003000
@@ -328,21 +328,21 @@ object frmMain: TfrmMain
   end
   object pnlMain: TPanel
     Left = 0
-    Height = 365
+    Height = 405
     Top = 56
     Width = 777
     Align = alClient
     AutoSize = True
     BevelOuter = bvNone
     Caption = 'pnlMain'
-    ClientHeight = 365
+    ClientHeight = 405
     ClientWidth = 777
     Color = clSilver
     ParentColor = False
     TabOrder = 0
     object filelist: TListBox
       Left = 0
-      Height = 185
+      Height = 222
       Top = 0
       Width = 777
       Align = alClient
@@ -355,11 +355,11 @@ object frmMain: TfrmMain
     end
     object pnlbottom: TPanel
       Left = 0
-      Height = 180
-      Top = 185
+      Height = 183
+      Top = 222
       Width = 777
       Align = alBottom
-      ClientHeight = 180
+      ClientHeight = 183
       ClientWidth = 777
       ParentColor = False
       ParentShowHint = False
@@ -367,7 +367,7 @@ object frmMain: TfrmMain
       TabOrder = 1
       object PageControl1: TPageControl
         Left = 1
-        Height = 178
+        Height = 181
         Top = 1
         Width = 775
         ActivePage = tabPage1
@@ -376,13 +376,13 @@ object frmMain: TfrmMain
         TabOrder = 0
         object tabPage1: TTabSheet
           Caption = 'tabPage1'
-          ClientHeight = 151
+          ClientHeight = 154
           ClientWidth = 767
           object Label1: TLabel
             Left = 13
             Height = 18
             Top = 4
-            Width = 85
+            Width = 73
             Align = alCustom
             Caption = 'Convert to....'
             ParentColor = False
@@ -391,7 +391,7 @@ object frmMain: TfrmMain
             Left = 13
             Height = 18
             Top = 103
-            Width = 87
+            Width = 110
             Caption = 'Output folder'
             ParentColor = False
           end
@@ -399,7 +399,7 @@ object frmMain: TfrmMain
             Left = 13
             Height = 18
             Top = 53
-            Width = 85
+            Width = 46
             Caption = 'Convert to....'
             ParentColor = False
           end
@@ -1095,7 +1095,7 @@ object frmMain: TfrmMain
   object StatusBar1: TStatusBar
     Left = 0
     Height = 23
-    Top = 584
+    Top = 624
     Width = 777
     AutoHint = True
     Panels = <>
@@ -1105,7 +1105,7 @@ object frmMain: TfrmMain
   object pnlAdditionalOptions: TPanel
     Left = 0
     Height = 163
-    Top = 421
+    Top = 461
     Width = 777
     Align = alBottom
     ClientHeight = 163
@@ -1131,7 +1131,7 @@ object frmMain: TfrmMain
         Top = 0
         Width = 767
         Align = alClient
-        PageIndex = 0
+        PageIndex = 4
         TabOrder = 0
         object tabVideoSettings: TPage
           Caption = 'Video Settings'
@@ -1562,53 +1562,6 @@ object frmMain: TfrmMain
             end
           end
         end
-        object tabCmdLineSettings: TPage
-          Caption = 'tabCmdLineSettings'
-          ClientWidth = 759
-          ClientHeight = 114
-          object Panel8: TPanel
-            Left = 5
-            Height = 114
-            Top = 0
-            Width = 469
-            Align = alLeft
-            AutoSize = True
-            BorderSpacing.Left = 5
-            BevelOuter = bvNone
-            ClientHeight = 114
-            ClientWidth = 469
-            Constraints.MinWidth = 300
-            TabOrder = 0
-            object Label3: TLabel
-              AnchorSideLeft.Control = Panel8
-              AnchorSideTop.Control = Panel8
-              AnchorSideRight.Control = Panel8
-              AnchorSideRight.Side = asrBottom
-              Left = 0
-              Height = 18
-              Top = 3
-              Width = 469
-              Anchors = [akTop, akLeft, akRight]
-              BorderSpacing.Top = 3
-              Caption = 'Additional command line parameters'
-              ParentColor = False
-            end
-            object commandlineparams: TEdit
-              AnchorSideLeft.Control = Panel8
-              AnchorSideTop.Control = Label3
-              AnchorSideTop.Side = asrBottom
-              AnchorSideRight.Control = Panel8
-              AnchorSideRight.Side = asrBottom
-              Left = 0
-              Height = 27
-              Top = 24
-              Width = 469
-              Anchors = [akTop, akLeft, akRight]
-              BorderSpacing.Top = 3
-              TabOrder = 0
-            end
-          end
-        end
         object tabPageCrop: TPage
           Caption = 'Crop'
           ClientWidth = 759
@@ -2000,6 +1953,53 @@ object frmMain: TfrmMain
               MaxValue = 59
               TabOrder = 5
               Value = 1
+            end
+          end
+        end
+        object tabCmdLineSettings: TPage
+          Caption = 'tabCmdLineSettings'
+          ClientWidth = 759
+          ClientHeight = 114
+          object Panel8: TPanel
+            Left = 5
+            Height = 114
+            Top = 0
+            Width = 469
+            Align = alLeft
+            AutoSize = True
+            BorderSpacing.Left = 5
+            BevelOuter = bvNone
+            ClientHeight = 114
+            ClientWidth = 469
+            Constraints.MinWidth = 300
+            TabOrder = 0
+            object Label3: TLabel
+              AnchorSideLeft.Control = Panel8
+              AnchorSideTop.Control = Panel8
+              AnchorSideRight.Control = Panel8
+              AnchorSideRight.Side = asrBottom
+              Left = 0
+              Height = 18
+              Top = 3
+              Width = 469
+              Anchors = [akTop, akLeft, akRight]
+              BorderSpacing.Top = 3
+              Caption = 'Additional command line parameters'
+              ParentColor = False
+            end
+            object commandlineparams: TEdit
+              AnchorSideLeft.Control = Panel8
+              AnchorSideTop.Control = Label3
+              AnchorSideTop.Side = asrBottom
+              AnchorSideRight.Control = Panel8
+              AnchorSideRight.Side = asrBottom
+              Left = 0
+              Height = 27
+              Top = 24
+              Width = 469
+              Anchors = [akTop, akLeft, akRight]
+              BorderSpacing.Top = 3
+              TabOrder = 0
             end
           end
         end
