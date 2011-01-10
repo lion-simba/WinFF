@@ -456,7 +456,7 @@ end;
 procedure TfrmEditPresets.exportClick(Sender: TObject);
 
 begin
-unit6.form6.show;
+frmExport.show;
 end;
 
 

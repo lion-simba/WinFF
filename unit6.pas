@@ -28,9 +28,9 @@ uses
 
 type
 
-  { TForm6 }
+  { TfrmExport }
 
-  TForm6 = class(TForm)
+  TfrmExport = class(TForm)
     cancelbtn: TButton;
     exportbtn: TButton;
     Label1: TLabel;
@@ -47,7 +47,7 @@ type
   end; 
 
 var
-  Form6: TForm6; 
+  frmExport: TfrmExport;
 
 Resourcestring
     rsform6='Export Presets';
@@ -59,9 +59,9 @@ implementation
 
 uses unit1;
 
-{ TForm6 }
+{ TfrmExport }
 
-procedure TForm6.FormShow(Sender: TObject);
+procedure TfrmExport.FormShow(Sender: TObject);
 var
 i:integer;
 node,subnode: tdomnode;
@@ -69,7 +69,7 @@ begin
 
    TranslateUnitResourceStrings('unit6', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
 
-   form6.caption:=rsform6;
+   frmExport.caption:=rsform6;
    exportbtn.Caption:=rsexportbtn;
    cancelbtn.Caption:=rscancelbtn;
    label1.Caption:=rslabel1;
@@ -82,22 +82,22 @@ begin
    end;
 end;
 
-procedure TForm6.FormResize(Sender: TObject);
+procedure TfrmExport.FormResize(Sender: TObject);
 begin
-  exportbtn.Top:=form6.Height-40;
-  exportbtn.Left:=form6.Width-179;
-  cancelbtn.Top:=form6.Height-40;
-  cancelbtn.Left:=form6.Width-91;
-  listbox1.Width:=form6.Width-37;
-  listbox1.Height:=form6.Height-88;
+  exportbtn.Top:=frmExport.Height-40;
+  exportbtn.Left:=frmExport.Width-179;
+  cancelbtn.Top:=frmExport.Height-40;
+  cancelbtn.Left:=frmExport.Width-91;
+  listbox1.Width:=frmExport.Width-37;
+  listbox1.Height:=frmExport.Height-88;
 end;
 
-procedure TForm6.cancelbtnClick(Sender: TObject);
+procedure TfrmExport.cancelbtnClick(Sender: TObject);
 begin
-  form6.close;
+  frmExport.close;
 end;
 
-procedure TForm6.exportbtnClick(Sender: TObject);
+procedure TfrmExport.exportbtnClick(Sender: TObject);
 var
 exportfile: txmldocument;
 exportpreset: tdomelement;
@@ -168,7 +168,7 @@ for i := 0 to listbox1.Count-1 do
 
   writexmlfile(exportfile,savedialog1.FileName);
 
-  form6.close;
+  frmExport.close;
 
 end;
 

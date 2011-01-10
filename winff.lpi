@@ -92,7 +92,7 @@
       <Unit6>
         <Filename Value="unit6.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form6"/>
+        <ComponentName Value="frmExport"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="unit6"/>

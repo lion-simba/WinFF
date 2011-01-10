@@ -43,6 +43,6 @@ begin
   Application.CreateForm(TfrmAbout, frmAbout);
   Application.CreateForm(TfrmPreferences, frmPreferences);
   Application.CreateForm(TfrmScript, frmScript);
-  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TfrmExport, frmExport);
   Application.Run;
 end.
