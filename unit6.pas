@@ -24,7 +24,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, dom, xmlwrite, gettext, translations;
+  StdCtrls, dom, xmlwrite, gettext, translations, ExtCtrls;
 
 type
 
@@ -35,6 +35,7 @@ type
     exportbtn: TButton;
     Label1: TLabel;
     ListBox1: TListBox;
+    Panel1: TPanel;
     savedialog1: TSavedialog;
     procedure cancelbtnClick(Sender: TObject);
     procedure exportbtnClick(Sender: TObject);
