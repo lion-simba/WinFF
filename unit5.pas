@@ -31,18 +31,16 @@ type
 
   TfrmScript = class(TForm)
     btnClip: TButton;
-    btnContinue: TButton;
+    btnClose: TButton;
+    btnRun: TButton;
     btnSave: TButton;
-    Button1: TButton;
     Memo1: TMemo;
     Panel1: TPanel;
-    Panel2: TPanel;
-    Panel3: TPanel;
     SaveDialog1: TSaveDialog;
     procedure btnClipClick(Sender: TObject);
-    procedure btnContinueClick(Sender: TObject);
+    procedure btnRunClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure btnCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormResize(Sender: TObject);
   private
@@ -72,10 +70,10 @@ procedure TfrmScript.FormCreate(Sender: TObject);
 begin
 TranslateUnitResourceStrings('unit5', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
   frmScript.Caption:=rsform5;
-  button1.Caption:=rsbutton1;
+  btnClose.Caption:=rsbutton1;
   btnClip.Caption:=rsClip;
   btnSave.Caption:=rsSave;
-  btnContinue.Caption:=rsContinue;
+  btnRun.Caption:=rsContinue;
   application.processmessages;
   btnSave.Left := btnClip.Left + btnClip.Width + 4;
 
@@ -116,9 +114,9 @@ begin
   if frmScript.height < 150 then frmScript.height:=150;
   memo1.Height:= frmScript.Height -56;
   memo1.width:= frmScript.width -20;
-  // button1 position determined by panels
-  // button1.Left:=frmScript.Width div 2 - 36;
-  // button1.top:=frmScript.Height-40;
+  // btnClose position determined by panels
+  // btnClose.Left:=frmScript.Width div 2 - 36;
+  // btnClose.top:=frmScript.Height-40;
 end;
 
 initialization
