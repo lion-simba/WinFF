@@ -1,5 +1,5 @@
-object Form5: TForm5
-  Left = 499
+object frmScript: TfrmScript
+  Left = 820
   Height = 386
   Top = 182
   Width = 654

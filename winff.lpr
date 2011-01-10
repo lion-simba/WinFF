@@ -42,7 +42,7 @@ begin
   Application.CreateForm(TfrmEditPresets, frmEditPresets);
   Application.CreateForm(TfrmAbout, frmAbout);
   Application.CreateForm(TfrmPreferences, frmPreferences);
-  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TfrmScript, frmScript);
   Application.CreateForm(TForm6, Form6);
   Application.Run;
 end.

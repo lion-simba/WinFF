@@ -1533,7 +1533,7 @@ begin                                     // get setup
       end;
    params:=getpresetparams(pn);
    extension:=getpresetextension(pn);
-   unit5.form5.memo1.lines.Clear;
+   frmScript.memo1.lines.Clear;
 
                                          // trim everything up
    commandlineparams.text := trim(commandlineparams.Text);
@@ -1766,9 +1766,9 @@ begin                                     // get setup
    else
    begin
       // if continue pressed, attempt to execute user modified script;
-      unit5.Form5.Memo1.Lines:=script;
-      form5.scriptfilename:= presetspath + batfile;
-      resmod := unit5.Form5.ShowModal;
+      frmScript.Memo1.Lines:=script;
+      frmScript.scriptfilename:= presetspath + batfile;
+      resmod := frmScript.ShowModal;
       if resmod = 1 then     // Continue Clicked;
       begin
 

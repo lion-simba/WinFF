@@ -27,9 +27,9 @@ uses
 
 type
 
-  { TForm5 }
+  { TfrmScript }
 
-  TForm5 = class(TForm)
+  TfrmScript = class(TForm)
     btnClip: TButton;
     btnContinue: TButton;
     btnSave: TButton;
@@ -53,7 +53,7 @@ type
   end; 
 
 var
-  Form5: TForm5; 
+  frmScript: TfrmScript;
 
 Resourcestring
   rsform5='FFmpeg Command Line';
@@ -66,12 +66,12 @@ implementation
 
 uses unit1;
 
-{ TForm5 }
+{ TfrmScript }
 
-procedure TForm5.FormCreate(Sender: TObject);
+procedure TfrmScript.FormCreate(Sender: TObject);
 begin
 TranslateUnitResourceStrings('unit5', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-  form5.Caption:=rsform5;
+  frmScript.Caption:=rsform5;
   button1.Caption:=rsbutton1;
   btnClip.Caption:=rsClip;
   btnSave.Caption:=rsSave;
@@ -81,12 +81,12 @@ TranslateUnitResourceStrings('unit5', PODirectory + 'winff.%s.po', unit1.Lang, u
 
 end;
 
-procedure TForm5.Button1Click(Sender: TObject);
+procedure TfrmScript.btnCloseClick(Sender: TObject);
 begin
-  form5.Close;
+  frmScript.Close;
 end;
 
-procedure TForm5.btnClipClick(Sender: TObject);
+procedure TfrmScript.btnClipClick(Sender: TObject);
 begin
      Clipboard.AsText:=memo1.text; // can copy just one line, but what if its 2-pass?
      btnClip.Caption := rsClip2;
@@ -96,12 +96,12 @@ begin
      application.processmessages;
 end;
 
-procedure TForm5.btnContinueClick(Sender: TObject);
+procedure TfrmScript.btnRunClick(Sender: TObject);
 begin
   Memo1.lines.SaveToFile(ScriptFilename);
 end;
 
-procedure TForm5.btnSaveClick(Sender: TObject);
+procedure TfrmScript.btnSaveClick(Sender: TObject);
 begin
   If SaveDialog1.execute then
   begin
@@ -110,15 +110,15 @@ begin
   end;
 end;
 
-procedure TForm5.FormResize(Sender: TObject);
+procedure TfrmScript.FormResize(Sender: TObject);
 begin
-  if form5.Width < 100 then form5.width:=100;
-  if form5.height < 150 then form5.height:=150;
-  memo1.Height:= form5.Height -56;
-  memo1.width:= form5.width -20;
+  if frmScript.Width < 100 then frmScript.width:=100;
+  if frmScript.height < 150 then frmScript.height:=150;
+  memo1.Height:= frmScript.Height -56;
+  memo1.width:= frmScript.width -20;
   // button1 position determined by panels
-  // button1.Left:=form5.Width div 2 - 36;
-  // button1.top:=form5.Height-40;
+  // button1.Left:=frmScript.Width div 2 - 36;
+  // button1.top:=frmScript.Height-40;
 end;
 
 initialization
