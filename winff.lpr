@@ -41,7 +41,7 @@ begin
   Application.CreateForm(TfrmMain, frmMain);
   Application.CreateForm(TfrmEditPresets, frmEditPresets);
   Application.CreateForm(TfrmAbout, frmAbout);
-  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TfrmPreferences, frmPreferences);
   Application.CreateForm(TForm5, Form5);
   Application.CreateForm(TForm6, Form6);
   Application.Run;

@@ -1264,7 +1264,7 @@ end;
 // menu: edit preferences
 procedure TfrmMain.mitPreferencesClick(Sender: TObject);
 begin
-form4.show;
+frmPreferences.show;
 end;
 
 //menu: help documentation

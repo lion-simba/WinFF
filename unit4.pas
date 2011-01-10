@@ -27,9 +27,9 @@ uses
 
 type
 
-  { TForm4 }
+  { TfrmPreferences }
 
-  TForm4 = class(TForm)
+  TfrmPreferences = class(TForm)
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
@@ -82,7 +82,7 @@ type
   end; 
 
 var
-  Form4: TForm4; 
+  frmPreferences: TfrmPreferences;
 
 resourcestring
     rsform4='WinFF Preferences';
@@ -110,14 +110,14 @@ resourcestring
 implementation
 
 uses unit1;
-{ TForm4 }
+{ TfrmPreferences }
 
 // load preferences
-procedure TForm4.FormCreate(Sender: TObject);
+procedure TfrmPreferences.FormCreate(Sender: TObject);
 
 begin
     TranslateUnitResourceStrings('unit4', PODirectory + 'winff.%s.po', unit1.Lang, unit1.FallbackLang);
-    form4.Caption:=rsform4;
+    frmPreferences.Caption:=rsform4;
     button1.caption:=rsButton1;
     button2.caption:=rsButton2;
     checkbox1.caption:=rsCheckBox1;
@@ -171,7 +171,7 @@ begin
 end;
 
 // save preference
-procedure TForm4.Button1Click(Sender: TObject);
+procedure TfrmPreferences.Button1Click(Sender: TObject);
 
 begin
   frmMain.setconfigvalue('general/destfolder',edit1.text);
@@ -253,52 +253,52 @@ begin
   {$endif}
   
 
-  form4.close;
+  frmPreferences.close;
 
 end;
 
-procedure TForm4.Button3Click(Sender: TObject);
+procedure TfrmPreferences.Button3Click(Sender: TObject);
 begin
  if selectdirectorydialog1.Execute then
     edit1.Text := selectdirectorydialog1.FileName;
 end;
 
-procedure TForm4.Button2Click(Sender: TObject);
+procedure TfrmPreferences.Button2Click(Sender: TObject);
 begin
-  form4.close;
+  frmPreferences.close;
 end;
 
-procedure TForm4.Button4Click(Sender: TObject);
+procedure TfrmPreferences.Button4Click(Sender: TObject);
 begin
   if opendialog1.Execute then
     edit2.Text := opendialog1.FileName;
 end;
 
-procedure TForm4.Button5Click(Sender: TObject);
+procedure TfrmPreferences.Button5Click(Sender: TObject);
 begin
    if opendialog1.Execute then
     edit3.Text := opendialog1.FileName;
 end;
 
-procedure TForm4.Button6Click(Sender: TObject);
+procedure TfrmPreferences.Button6Click(Sender: TObject);
 begin
   if opendialog1.Execute then
     edit4.Text := opendialog1.FileName;
 end;
 
-procedure TForm4.Button7Click(Sender: TObject);
+procedure TfrmPreferences.Button7Click(Sender: TObject);
 begin
   if opendialog1.Execute then
     edit5.Text := opendialog1.FileName;
 end;
 
-procedure TForm4.Button8Click(Sender: TObject);
+procedure TfrmPreferences.Button8Click(Sender: TObject);
 begin
    if opendialog1.Execute then
     edit6.Text := opendialog1.FileName;
 end;
 
-procedure TForm4.edtThreadsChange(Sender: TObject);
+procedure TfrmPreferences.edtThreadsChange(Sender: TObject);
 begin
 
 end;

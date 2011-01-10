@@ -1,5 +1,5 @@
-object Form4: TForm4
-  Left = 577
+object frmPreferences: TfrmPreferences
+  Left = 570
   Height = 330
   Top = 120
   Width = 396
