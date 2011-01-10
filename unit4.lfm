@@ -75,7 +75,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 10
         BorderSpacing.Right = 3
-        Caption = 'Default Destination Directory'
+        Caption = 'Default Destination Directory:'
         ParentColor = False
       end
       object CheckBox1: TCheckBox
@@ -154,7 +154,7 @@ object frmPreferences: TfrmPreferences
           Height = 19
           Top = 4
           Width = 222
-          Caption = 'Mutlithreading for Dual Core Processors'
+          Caption = 'Use Several Encoding Threads:'
           TabOrder = 0
         end
         object edtThreads: TEdit
@@ -195,7 +195,7 @@ object frmPreferences: TfrmPreferences
           Height = 18
           Top = 5
           Width = 51
-          Caption = 'Priority'
+          Caption = 'Priority:'
           ParentColor = False
         end
         object prioritybox: TComboBox
@@ -229,7 +229,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 10
         BorderSpacing.Right = 3
-        Caption = 'Path to FFmpeg Executable'
+        Caption = 'Path to FFmpeg Executable:'
         ParentColor = False
       end
       object Label3: TLabel
@@ -241,7 +241,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 5
         BorderSpacing.Right = 3
-        Caption = 'Path to FFplay Executable'
+        Caption = 'Path to FFplay Executable:'
         ParentColor = False
       end
       object CheckBox2: TCheckBox
@@ -352,7 +352,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 10
         BorderSpacing.Right = 3
-        Caption = 'Path to FFmpeg Executable'
+        Caption = 'Path to FFmpeg Executable:'
         ParentColor = False
       end
       object Label5: TLabel
@@ -364,7 +364,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 5
         BorderSpacing.Right = 3
-        Caption = 'Path to FFplay Executable'
+        Caption = 'Path to FFplay Executable:'
         ParentColor = False
       end
       object Label6: TLabel
@@ -376,7 +376,7 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Left = 3
         BorderSpacing.Top = 5
         BorderSpacing.Right = 3
-        Caption = 'Terminal to run FFmpeg in'
+        Caption = 'Terminal to run FFmpeg in:'
         ParentColor = False
       end
       object Panel6: TPanel
@@ -524,7 +524,7 @@ object frmPreferences: TfrmPreferences
           Height = 18
           Top = 4
           Width = 115
-          Caption = 'Terminal Options (''-e'' for xterm, ''-x'' for gnome terminal)'
+          Caption = 'Terminal Options:'
           ParentColor = False
         end
         object Edit7: TEdit
@@ -535,6 +535,7 @@ object frmPreferences: TfrmPreferences
           AnchorSideRight.Side = asrBottom
           Left = 118
           Height = 27
+          Hint = '''-e'' for xterm, ''-x'' for gnome-terminal'
           Top = 0
           Width = 244
           Anchors = [akTop, akLeft, akRight]

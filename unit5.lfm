@@ -85,7 +85,7 @@ object frmScript: TfrmScript
       AutoSize = True
       BorderSpacing.Right = 10
       BorderSpacing.InnerBorder = 4
-      Caption = 'OK'
+      Caption = 'Close'
       Constraints.MinWidth = 80
       ModalResult = 2
       OnClick = btnCloseClick
@@ -104,7 +104,7 @@ object frmScript: TfrmScript
       AutoSize = True
       BorderSpacing.Right = 10
       BorderSpacing.InnerBorder = 4
-      Caption = 'Continue'
+      Caption = 'Run!'
       Constraints.MinWidth = 80
       ModalResult = 1
       OnClick = btnRunClick
@@ -138,7 +138,7 @@ object frmScript: TfrmScript
       AutoSize = True
       BorderSpacing.Left = 10
       BorderSpacing.InnerBorder = 4
-      Caption = 'Save'
+      Caption = 'Save As...'
       Constraints.MinWidth = 80
       OnClick = btnSaveClick
       TabOrder = 3

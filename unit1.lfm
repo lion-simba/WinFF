@@ -388,7 +388,7 @@ object frmMain: TfrmMain
           BorderSpacing.Left = 13
           BorderSpacing.Top = 5
           BorderSpacing.Right = 13
-          Caption = 'Convert To ...'
+          Caption = 'Convert to:'
           ParentColor = False
         end
         object Label19: TLabel
@@ -401,7 +401,7 @@ object frmMain: TfrmMain
           BorderSpacing.Left = 13
           BorderSpacing.Top = 3
           BorderSpacing.Right = 13
-          Caption = 'Device Preset'
+          Caption = 'Preset:'
           ParentColor = False
         end
         object Label11: TLabel
@@ -414,7 +414,7 @@ object frmMain: TfrmMain
           BorderSpacing.Left = 13
           BorderSpacing.Top = 3
           BorderSpacing.Right = 13
-          Caption = 'Output Folder'
+          Caption = 'Output Folder:'
           ParentColor = False
         end
         object categorybox: TComboBox
@@ -1176,7 +1176,7 @@ object frmMain: TfrmMain
       Top = 0
       Width = 800
       Align = alClient
-      Caption = 'gbxSettings'
+      Caption = 'Additional Options'
       ClientHeight = 143
       ClientWidth = 792
       TabOrder = 0
@@ -1189,7 +1189,7 @@ object frmMain: TfrmMain
         PageIndex = 0
         TabOrder = 0
         object tabVideoSettings: TPage
-          Caption = 'Video Settings'
+          Caption = 'Video'
           ClientWidth = 784
           ClientHeight = 116
           object Panel2: TPanel
@@ -1216,7 +1216,7 @@ object frmMain: TfrmMain
               Width = 104
               Anchors = [akTop, akLeft, akRight]
               BorderSpacing.Top = 3
-              Caption = 'Video Bit Rate'
+              Caption = 'Video Bitrate'
               ParentColor = False
             end
             object Vidbitrate: TEdit
@@ -1429,7 +1429,7 @@ object frmMain: TfrmMain
           end
         end
         object tabAudioSettings: TPage
-          Caption = 'Audio Settings'
+          Caption = 'Audio'
           ClientWidth = 784
           ClientHeight = 116
           object Panel1: TPanel
@@ -1456,7 +1456,7 @@ object frmMain: TfrmMain
               Width = 111
               Anchors = [akTop, akLeft, akRight]
               BorderSpacing.Top = 3
-              Caption = 'Audio Bit Rate'
+              Caption = 'Audio Bitrate'
               ParentColor = False
             end
             object Label20: TLabel
@@ -2012,7 +2012,7 @@ object frmMain: TfrmMain
           end
         end
         object tabCmdLineSettings: TPage
-          Caption = 'tabCmdLineSettings'
+          Caption = 'FFmpeg'
           ClientWidth = 784
           ClientHeight = 113
           object Panel8: TPanel
@@ -2039,7 +2039,7 @@ object frmMain: TfrmMain
               Width = 469
               Anchors = [akTop, akLeft, akRight]
               BorderSpacing.Top = 3
-              Caption = 'Additional command line parameters'
+              Caption = 'Additional Command Line Parameters'
               ParentColor = False
             end
             object commandlineparams: TEdit

@@ -60,7 +60,7 @@ object frmExport: TfrmExport
     BorderSpacing.Left = 10
     BorderSpacing.Top = 10
     BorderSpacing.Right = 10
-    Caption = 'Choose Presets to export:'
+    Caption = 'Choose Presets to Export:'
     ParentColor = False
   end
   object ListBox1: TListBox

@@ -108,7 +108,7 @@ resourcestring
     rsLabel4='Path to FFmpeg Executable';
     rsLabel5='Path to FFPlay Executable';
     rsLabel6='Terminal to run FFmpeg';
-    rsLabel7='Terminal Options (-e for Xterm , -x for Gnome Terminal';
+    rsLabel7='Terminal Options';
     rslabel8='Priority';
     rsPage1='General';
     rsPage2='Ms Windows';
