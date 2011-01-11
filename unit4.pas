@@ -71,7 +71,6 @@ type
     Panel6: TPanel;
     Panel7: TPanel;
     Panel8: TPanel;
-    Panel9: TPanel;
     pnlBottom: TPanel;
     prioritybox: TComboBox;
     SelectDirectoryDialog1: TSelectDirectoryDialog;
