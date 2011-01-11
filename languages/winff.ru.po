@@ -96,7 +96,7 @@ msgstr "Дополнительные параметры"
 
 #: unit1.rshint2pass
 msgid "Using two passes allows the encoder to gather information in the first run for enhanced quality."
-msgstr "Двухпроходное кодирование позволяет улучшить качество."
+msgstr "двухпроходное кодирование позволяет улучшить качество"
 
 #: unit1.rshintadd
 msgid "add file(s) to the list for conversion"
@@ -104,16 +104,20 @@ msgstr "добавить файл(ы) в список преобразовани
 
 #: unit1.rshintaspectratio
 msgid "(<integer:integer> or <real>) the physical aspect ratio (DAR) of the target display."
-msgstr "(<целое:целое> или <вещественное>) физическое соотношение сторон дисплея (DAR)."
+msgstr "(<целое:целое> или <вещественное>) физическое соотношение сторон дисплея (DAR)"
 
 #: unit1.rshintaudiobitrate
 msgctxt "unit1.rshintaudiobitrate"
 msgid "(<integer>kb) the target kilobits/second that the stream should use"
-msgstr "(<целое>kb) битрейт в килобитах в секунду"
+msgstr "(<целое>) битрейт в килобитах в секунду"
 
 #: unit1.rshintaudiochannels
 msgid "(<integer>) number of audio channels"
 msgstr "(<целое>) количество аудио-каналов"
+
+#: unit1.rshintaudiosync
+msgid "(<integer>) Audio Sync = DON\"T KNOW THE HINT TEXT!"
+msgstr "(<целое>) От 10 до частоты дискретизации (44100, 48000). Позволяет \"растянуть\" или \"сжать\" аудио дорожку."
 
 #: unit1.rshintclear
 msgid "remove all files from the list"
@@ -156,6 +160,10 @@ msgstr "воспроизвести выбранный файл с помощью
 msgid "preview using the output settings"
 msgstr "предварительный просмотр результата"
 
+#: unit1.rshintrecord
+msgid "<hh:mm:ss> - Amount of time to record"
+msgstr "<чч:мм:сс> - Сколько времени записывать"
+
 #: unit1.rshintremove
 msgid "remove the selected file(s) from the list"
 msgstr "удалить выбранные файлы из списка"
@@ -164,16 +172,28 @@ msgstr "удалить выбранные файлы из списка"
 msgid "(<integer>) the sampling frequency of the audio in Hertz"
 msgstr "(<целое>) частота дискретизации аудио в Герцах"
 
+#: unit1.rshintseek
+msgid "<hh:mm:ss> - Begin recording at start time"
+msgstr "<чч:мм:сс> - Время начала записи"
+
+#: unit1.rshinttime
+msgid "Make sure that the start time + time to record is less than total length of job"
+msgstr "Удостоверьтесь, что начальное время плюс время записи меньше полной длинны файла"
+
 #: unit1.rshintvideobitrate
 #, fuzzy
 msgctxt "unit1.rshintvideobitrate"
 msgid "(<integer>kb) the target kilobits/second that the stream should use"
-msgstr "(<целое>кб) скорость данных для потока в килобитах в секунду"
+msgstr "(<целое>) скорость данных для потока в килобитах в секунду"
 
 #: unit1.rshintvideosize
 #, fuzzy
 msgid "(<integer> X <integer>) the amount of pixels of information. For codecs that don't support pixel aspect ratio (PAR) this is the size of the video when viewed."
-msgstr "(<целое> X <целое>) размер изображения в пикселях."
+msgstr "(<целое> X <целое>) размер изображения в пикселях"
+
+#: unit1.rshintvolume
+msgid "(<integer>) Current Volume = 256, 128 = half volume, 512 = double volume"
+msgstr "(<целое>) 256 = текущая громкость, 128 = половинная громкость, 512 = двойная громкость"
 
 #: unit1.rsimportmenu
 msgid "Import Preset"
@@ -204,6 +224,28 @@ msgstr "Параметры:"
 msgctxt "unit1.rslabel2"
 msgid "Output Folder"
 msgstr "Сохранить в папку:"
+
+#: unit1.rslabel20
+msgid "Volume"
+msgstr "Громкость"
+
+#: unit1.rslabel21
+#, fuzzy
+#| msgid "Audio Settings"
+msgid "Audio Sync"
+msgstr "Синхронизация"
+
+#: unit1.rslabel22
+msgid "Seek to"
+msgstr "Перемотать к"
+
+#: unit1.rslabel23
+msgid "Time to Record"
+msgstr "Время записи"
+
+#: unit1.rslabel24
+msgid "Hours / Minutes / Seconds"
+msgstr "Часы / Минуты / Секунды"
 
 #: unit1.rslabel3
 msgid "Video Bitrate"
@@ -341,6 +383,11 @@ msgstr "Предпросмотр"
 #: unit1.rsremovebtn
 msgid "Remove"
 msgstr "Удалить"
+
+#: unit1.rsselectdirectory
+#| msgid "Default Destination Directory"
+msgid "Select Directory"
+msgstr "Выберите папку"
 
 #: unit1.rsselectpresetfile
 msgid "Select Preset File"
@@ -512,11 +559,11 @@ msgstr "Отмена"
 
 #: unit4.rscheckbox1
 msgid "Remember Last Directory Used"
-msgstr "Запоминать последний использованный"
+msgstr "Запоминать последнюю использованную"
 
 #: unit4.rscheckbox2
 msgid "Use CHCP for international characters"
-msgstr "Устанавливать кодировку терминала с помощью CHCP"
+msgstr "Использовать CHCP в терминале"
 
 #: unit4.rscheckbox3
 msgid "Multithreading for Dual Core Processors"
@@ -528,7 +575,7 @@ msgstr "Настройки WinFF"
 
 #: unit4.rslabel1
 msgid "Default Destination Directory"
-msgstr "Каталог для сохранения по умолчанию"
+msgstr "Сохранять в папку:"
 
 #: unit4.rslabel2
 msgid "Path to FFmpeg.exe"
@@ -552,7 +599,7 @@ msgstr "Терминал для запуска FFmpeg"
 
 #: unit4.rslabel7
 msgid "Terminal Options (-e for Xterm , -x for Gnome Terminal"
-msgstr "Аргументы для терминала (-e для Xterm , -x для Gnome Terminal)"
+msgstr "Опции терминала (-e для Xterm , -x для Gnome)"
 
 #: unit4.rslabel8
 msgctxt "unit4.rslabel8"
@@ -588,9 +635,31 @@ msgctxt "unit5.rsbutton1"
 msgid "OK"
 msgstr "ОК"
 
+#: unit5.rsclip
+msgid "Clipboard"
+msgstr "В буфер"
+
+#: unit5.rsclip2
+#, fuzzy
+#| msgid "Close"
+msgctxt "unit5.rsclip2"
+msgid "Close"
+msgstr "Закрыть"
+
+#: unit5.rscontinue
+#| msgid "Converting"
+msgid "Continue"
+msgstr "Начать!"
+
 #: unit5.rsform5
 msgid "FFmpeg Command Line"
 msgstr "Сценарий FFmpeg"
+
+#: unit5.rssave
+#| msgid "Save"
+msgctxt "unit5.rssave"
+msgid "Save"
+msgstr "Сохранить"
 
 #: unit6.rscancelbtn
 msgctxt "unit6.rscancelbtn"
