@@ -563,7 +563,7 @@ msgstr "Запоминать последнюю использованную"
 
 #: unit4.rscheckbox2
 msgid "Use CHCP for international characters"
-msgstr "Устанавливать кодировку терминала с помощью CHCP"
+msgstr "Использовать CHCP в терминале"
 
 #: unit4.rscheckbox3
 msgid "Multithreading for Dual Core Processors"
