@@ -654,12 +654,12 @@ msgstr "Каталог для сохранения:"
 #: TFRMPREFERENCES.LABEL2.CAPTION
 msgctxt "TFRMPREFERENCES.LABEL2.CAPTION"
 msgid "Path to FFmpeg Executable:"
-msgstr "Путь к FFmpeg.exe:"
+msgstr "Путь к FFmpeg:"
 
 #: TFRMPREFERENCES.LABEL3.CAPTION
 msgctxt "TFRMPREFERENCES.LABEL3.CAPTION"
 msgid "Path to FFplay Executable:"
-msgstr "Путь к FFPlay.exe:"
+msgstr "Путь к FFPlay:"
 
 #: TFRMPREFERENCES.LABEL4.CAPTION
 msgctxt "TFRMPREFERENCES.LABEL4.CAPTION"
