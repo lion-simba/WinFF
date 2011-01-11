@@ -599,7 +599,7 @@ msgstr "Терминал для запуска FFmpeg"
 
 #: unit4.rslabel7
 msgid "Terminal Options (-e for Xterm , -x for Gnome Terminal"
-msgstr "Аргументы для терминала (-e для Xterm , -x для Gnome Terminal)"
+msgstr "Опции терминала (-e для Xterm , -x для Gnome)"
 
 #: unit4.rslabel8
 msgctxt "unit4.rslabel8"
