@@ -236,7 +236,7 @@ object frmAbout: TfrmAbout
     object Page2: TPage
       Caption = 'FFmpeg'
       ClientWidth = 365
-      ClientHeight = 238
+      ClientHeight = 235
       object Label5: TLabel
         Left = 4
         Height = 18
@@ -299,10 +299,10 @@ object frmAbout: TfrmAbout
     object Page3: TPage
       Caption = 'Thanks'
       ClientWidth = 365
-      ClientHeight = 238
+      ClientHeight = 235
       object ListBox1: TListBox
         Left = 0
-        Height = 238
+        Height = 235
         Top = 0
         Width = 365
         Align = alClient

@@ -67,7 +67,7 @@ object frmEditPresets: TfrmEditPresets
       Left = 3
       Height = 56
       Top = 3
-      Width = 109
+      Width = 105
       Align = alLeft
       AutoSize = True
       BorderSpacing.Left = 3
@@ -75,14 +75,14 @@ object frmEditPresets: TfrmEditPresets
       BorderSpacing.Bottom = 5
       BevelOuter = bvNone
       ClientHeight = 56
-      ClientWidth = 109
+      ClientWidth = 105
       Constraints.MinWidth = 80
       TabOrder = 0
       object addpresetbtn: TButton
         Left = 3
         Height = 25
         Top = 3
-        Width = 106
+        Width = 102
         Align = alTop
         BorderSpacing.Left = 3
         BorderSpacing.Top = 3
@@ -95,7 +95,7 @@ object frmEditPresets: TfrmEditPresets
         Left = 3
         Height = 25
         Top = 31
-        Width = 106
+        Width = 102
         Align = alTop
         BorderSpacing.Left = 3
         BorderSpacing.Top = 3
