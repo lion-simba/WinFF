@@ -97,8 +97,9 @@ msgid "Thanks"
 msgstr "Спасибо"
 
 #: TFRMEDITPRESETS.ADDPRESETBTN.CAPTION
-msgid " Add / Update"
-msgstr " Добавить / Заменить"
+#| msgid " Add / Update"
+msgid "Add / Update"
+msgstr "Добавить / Заменить"
 
 #: TFRMEDITPRESETS.CANCELBTN.CAPTION
 msgctxt "TFRMEDITPRESETS.CANCELBTN.CAPTION"
@@ -114,8 +115,9 @@ msgid "Delete"
 msgstr "Удалить"
 
 #: TFRMEDITPRESETS.EDIT1.HINT
-msgid "(one word, only letters and numbers)"
-msgstr "(одно слово, только буквы и цифры)"
+#| msgid "(one word, only letters and numbers)"
+msgid "One word, only letters and numbers"
+msgstr "Одно слово, только буквы и цифры"
 
 #: TFRMEDITPRESETS.EDIT2.HINT
 msgid "Enter a more descriptive name for this preset"
@@ -126,8 +128,9 @@ msgid "Please don't use -i or output file parameters"
 msgstr "Пожалуйста, не используйте параметр -i и имя выходного файла"
 
 #: TFRMEDITPRESETS.EDIT4.HINT
-msgid "Do not include the ."
-msgstr "Без \".\""
+#| msgid "Do not include the ."
+msgid "Do not include a dot"
+msgstr "Без точки"
 
 #: TFRMEDITPRESETS.EDIT5.HINT
 msgid "Choose a category to group this preset under"
@@ -147,7 +150,8 @@ msgid "Category / Preset"
 msgstr "Категория / Параметры"
 
 #: TFRMEDITPRESETS.LABEL2.CAPTION
-msgid "Preset Name   (one word, only letters and numbers)"
+#| msgid "Preset Name   (one word, only letters and numbers)"
+msgid "Preset Name (one word, only letters and numbers)"
 msgstr "Имя (одно слово, только буквы и цифры)"
 
 #: TFRMEDITPRESETS.LABEL3.CAPTION
@@ -298,7 +302,7 @@ msgstr "Каталог для готового видео (должен отли
 
 #: TFRMMAIN.EDTASPECTRATIO.HINT
 msgid "(<integer:integer> or <real>) the physical aspect ratio (DAR) of the target display"
-msgstr "(<целое:целое> или <вещественное>) физическое соотношение сторон дисплея (DAR)."
+msgstr "(<целое:целое> или <вещественное>) физическое соотношение сторон дисплея (DAR)"
 
 #: TFRMMAIN.EDTAUDIOSYNC.HINT
 msgid "(<integer>) From 10 up to audio sampling rate such as 44100, 48000. Allows \"stretch\"/\"squeeze\" audio stream."
@@ -327,17 +331,17 @@ msgstr ""
 #: TFRMMAIN.EDTSEEKHH.HINT
 msgctxt "TFRMMAIN.EDTSEEKHH.HINT"
 msgid "<hh:mm:ss> - Seek to this position before start converting"
-msgstr "<чч:мм:сс> - Перемотать к этой позиции перед началом преобразования"
+msgstr "<чч:мм:сс> - перемотать к этой позиции перед началом преобразования"
 
 #: TFRMMAIN.EDTSEEKMM.HINT
 msgctxt "TFRMMAIN.EDTSEEKMM.HINT"
 msgid "<hh:mm:ss> - Seek to this position before start converting"
-msgstr "<чч:мм:сс> - Перемотать к этой позиции перед началом преобразования"
+msgstr "<чч:мм:сс> - перемотать к этой позиции перед началом преобразования"
 
 #: TFRMMAIN.EDTSEEKSS.HINT
 msgctxt "TFRMMAIN.EDTSEEKSS.HINT"
 msgid "<hh:mm:ss> - Seek to this position before start converting"
-msgstr "<чч:мм:сс> - Перемотать к этой позиции перед началом преобразования"
+msgstr "<чч:мм:сс> - перемотать к этой позиции перед началом преобразования"
 
 #: TFRMMAIN.EDTTTRHH.HINT
 #, fuzzy
@@ -367,7 +371,9 @@ msgid "Additional Options"
 msgstr "Дополнительные параметры"
 
 #: TFRMMAIN.GRPOUTPUTSETTINGS.CAPTION
-msgid "Output Settings"
+#, fuzzy
+#| msgid "Output Settings"
+msgid "Output Details"
 msgstr "Настройки преобразования"
 
 #: TFRMMAIN.LABEL1.CAPTION
@@ -379,7 +385,9 @@ msgid "Audio Channels"
 msgstr "Аудио-каналы"
 
 #: TFRMMAIN.LABEL11.CAPTION
-msgid "Output Directory:"
+#, fuzzy
+#| msgid "Output Directory:"
+msgid "Output Folder:"
 msgstr "Сохранить в каталог:"
 
 #: TFRMMAIN.LABEL19.CAPTION
@@ -570,13 +578,13 @@ msgstr "(<вещественное> или <целое>) количество к
 #, fuzzy
 msgctxt "TFRMMAIN.VIDSIZEX.HINT"
 msgid "(<integer> X <integer>) Amount of pixels in each frame. For codecs that don''t support pixel aspect ratio (PAR) this is the final frame size."
-msgstr "(<целое> X <целое>) Размер изображения в пикселях."
+msgstr "(<целое> X <целое>) размер изображения в пикселях"
 
 #: TFRMMAIN.VIDSIZEY.HINT
 #, fuzzy
 msgctxt "TFRMMAIN.VIDSIZEY.HINT"
 msgid "(<integer> X <integer>) Amount of pixels in each frame. For codecs that don''t support pixel aspect ratio (PAR) this is the final frame size."
-msgstr "(<целое> X <целое>) размер изображения в пикселях."
+msgstr "(<целое> X <целое>) размер изображения в пикселях"
 
 #: TFRMPREFERENCES.BUTTON1.CAPTION
 msgctxt "TFRMPREFERENCES.BUTTON1.CAPTION"
@@ -766,9 +774,9 @@ msgid "The preset to import does not have a label"
 msgstr "В импортируемых настройках отсутствует описание"
 
 #: unit1.rspresettoexport
-#, fuzzy
-msgid "Please select a preset to "
-msgstr "Выберите настройки для экспорта"
+#| msgid "Please select a preset to "
+msgid "Please select a preset to export"
+msgstr "Пожалуйста выберите параметры для экспорта"
 
 #: unit1.rspresetwithlabelexists
 msgid "Preset with label: %s%s%s already exists"

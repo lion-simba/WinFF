@@ -113,7 +113,7 @@ msgid "Thanks"
 msgstr ""
 
 #: TFRMEDITPRESETS.ADDPRESETBTN.CAPTION
-msgid " Add / Update"
+msgid "Add / Update"
 msgstr ""
 
 #: TFRMEDITPRESETS.CANCELBTN.CAPTION
@@ -132,7 +132,7 @@ msgid "Delete"
 msgstr ""
 
 #: TFRMEDITPRESETS.EDIT1.HINT
-msgid "(one word, only letters and numbers)"
+msgid "One word, only letters and numbers"
 msgstr ""
 
 #: TFRMEDITPRESETS.EDIT2.HINT
@@ -144,7 +144,7 @@ msgid "Please don't use -i or output file parameters"
 msgstr ""
 
 #: TFRMEDITPRESETS.EDIT4.HINT
-msgid "Do not include the ."
+msgid "Do not include a dot"
 msgstr ""
 
 #: TFRMEDITPRESETS.EDIT5.HINT
@@ -165,7 +165,7 @@ msgid "Category / Preset"
 msgstr ""
 
 #: TFRMEDITPRESETS.LABEL2.CAPTION
-msgid "Preset Name   (one word, only letters and numbers)"
+msgid "Preset Name (one word, only letters and numbers)"
 msgstr ""
 
 #: TFRMEDITPRESETS.LABEL3.CAPTION
@@ -382,7 +382,7 @@ msgid "Additional Options"
 msgstr ""
 
 #: TFRMMAIN.GRPOUTPUTSETTINGS.CAPTION
-msgid "Output Settings"
+msgid "Output Details"
 msgstr ""
 
 #: TFRMMAIN.LABEL1.CAPTION
@@ -394,7 +394,7 @@ msgid "Audio Channels"
 msgstr ""
 
 #: TFRMMAIN.LABEL11.CAPTION
-msgid "Output Directory:"
+msgid "Output Folder:"
 msgstr ""
 
 #: TFRMMAIN.LABEL19.CAPTION
@@ -781,8 +781,8 @@ msgstr "Förinställningen som ska importeras har ingen etikett."
 
 #: unit1.rspresettoexport
 #, fuzzy
-#| msgid "Please select a preset to export"
-msgid "Please select a preset to "
+#| msgid "Please select a preset to "
+msgid "Please select a preset to export"
 msgstr "Välj en förinställning att exportera"
 
 #: unit1.rspresetwithlabelexists
