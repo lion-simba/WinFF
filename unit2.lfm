@@ -210,7 +210,7 @@ object frmEditPresets: TfrmEditPresets
       BorderSpacing.Left = 3
       BorderSpacing.Top = 10
       BorderSpacing.Right = 3
-      Caption = 'Preset Name   (one word, only letters and numbers)'
+      Caption = 'Preset Name (one word, only letters and numbers)'
       ParentColor = False
     end
     object Label3: TLabel
