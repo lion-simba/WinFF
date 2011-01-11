@@ -87,7 +87,7 @@ object frmEditPresets: TfrmEditPresets
         BorderSpacing.Left = 3
         BorderSpacing.Top = 3
         BorderSpacing.InnerBorder = 4
-        Caption = ' Add / Update'
+        Caption = 'Add / Update'
         OnClick = addpresetbtnClick
         TabOrder = 0
       end
@@ -264,7 +264,7 @@ object frmEditPresets: TfrmEditPresets
     object Edit1: TEdit
       Left = 3
       Height = 27
-      Hint = '(one word, only letters and numbers)'
+      Hint = 'One word, only letters and numbers'
       Top = 28
       Width = 411
       Align = alTop
@@ -297,7 +297,7 @@ object frmEditPresets: TfrmEditPresets
     object Edit4: TEdit
       Left = 3
       Height = 27
-      Hint = 'Do not include the .'
+      Hint = 'Do not include a dot'
       Top = 184
       Width = 411
       Align = alTop

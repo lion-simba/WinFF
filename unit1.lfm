@@ -1902,7 +1902,7 @@ object frmMain: TfrmMain
               Anchors = [akTop, akRight]
               BorderSpacing.Top = 42
               BorderSpacing.Right = 20
-              Caption = 'Seek To'
+              Caption = 'Seek to'
               ParentColor = False
             end
             object label23: TLabel

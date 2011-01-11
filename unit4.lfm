@@ -521,6 +521,7 @@ object frmPreferences: TfrmPreferences
         AnchorSideRight.Side = asrBottom
         Left = 3
         Height = 27
+        Hint = '''-e'' for xterm, ''-x'' for gnome-terminal'
         Top = 178
         Width = 362
         Align = alTop
@@ -529,7 +530,6 @@ object frmPreferences: TfrmPreferences
         BorderSpacing.Right = 3
         ParentShowHint = False
         ShowHint = True
-        Hint = '''-e'' for xterm, ''-x'' for gnome-terminal'
         TabOrder = 3
       end
     end

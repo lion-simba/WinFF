@@ -283,7 +283,7 @@ var
   rsNameMustBeAllpha = 'Name Must be alphanumeric (a-z,A-Z,0-9)';
   rsExtensionnoperiod = 'Extension can not contain a period';
   rsFileDoesNotExist = 'file does not exist';
-  rsPresettoExport = 'Please select a preset to ';
+  rsPresettoExport = 'Please select a preset to export';
   rsSelectDirectory = 'Select Directory';
 
 implementation
